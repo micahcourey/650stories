@@ -35,6 +35,10 @@
       "via": "permissions",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "articles": {
+      "model": "interview",
+      "via": "author"
     }
   }
 }

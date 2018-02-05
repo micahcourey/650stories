@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/interview",
+      "handler": "Interview.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/interview/:_id",
+      "handler": "Interview.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/interview",
+      "handler": "Interview.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/interview/:_id",
+      "handler": "Interview.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/interview/:_id",
+      "handler": "Interview.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

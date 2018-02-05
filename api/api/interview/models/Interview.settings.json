@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "interview",
+    "description": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "model": "permission",
+      "via": "articles",
+      "plugin": "users-permissions"
+    }
+  }
+}
