@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -10,14 +9,14 @@ import * as emailSharer from 'highlight-share/dist/sharers/email';
 import * as copySharer from 'highlight-share/dist/sharers/copy';
 import * as linkedInSharer from 'highlight-share/dist/sharers/linked-in';
 
-import { ApiService } from './services/api.service';
+import { ApiService } from '../services/api.service';
 
 @Component({
-  selector: 'app-root',
-  template: `<router-outlet class="router-outlet"></router-outlet>`,
-  styleUrls: ['./app.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class AppComponent implements OnInit {
+export class HomeComponent implements OnInit {
   title = 'app';
   interviews: Array<any>;
   selectionShare: any;

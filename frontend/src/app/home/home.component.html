@@ -1,0 +1,15 @@
+<div class="home-container">
+
+  <div class="header">
+    <header-logo></header-logo>
+    <div *ngIf="showNav">Pretend I'm a navbar</div>
+    <h1 class="header-text">Inspiring interviews from the 650 Area Code.</h1>
+  </div>
+
+  <div class="interview-box" 
+    *ngFor="let interview of interviews">
+    <h2 class="interview-title">{{interview.title}}</h2>
+    <p id="shareable">{{interview.content}}</p>
+    <img src="{{interview.image}}" alt="A cute photo of a pup">
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.overlay, .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-container {
+  width: 1600px;
+  height: 96px;
+}
+.frame {
+  width: 48px;
+  height: 48px;
+  border: solid 4px #141410;
+}
+.overlay {
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  margin: 6px 0 0 6px;
+  opacity: 0.1;
+  background-color: #141410;
+}
+.title-650 {
+  z-index: 2;
+  width: 30px;
+  height: 10px;
+  font-family: MetricTest;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.63;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #141410;
+}
+.title-stories {
+  width: 70px;
+  height: 10px;
+  margin-left: 8px;
+  font-family: MetricTest;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.63;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #141410;
+}
