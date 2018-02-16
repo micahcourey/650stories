@@ -3,13 +3,24 @@
   <div class="header">
     <header-logo></header-logo>
     <div *ngIf="showNav">Pretend I'm a navbar</div>
-    <h1 class="header-text">Inspiring interviews from the 650 Area Code.</h1>
+    <div class="header-text">
+      <h1>Inspiring</h1>
+      <h1>interviews</h1>
+      <h1>from the 650</h1> 
+      <h1>Area Code.</h1>
+    </div>
   </div>
 
-  <div class="interview-box" 
-    *ngFor="let interview of interviews">
-    <h2 class="interview-title">{{interview.title}}</h2>
-    <p id="shareable">{{interview.content}}</p>
-    <img src="{{interview.image}}" alt="A cute photo of a pup">
+  <div class="interview-box" [style.background]="interview.color" *ngFor="let interview of interviews">
+    <div class="article-container">
+      <div>
+        <h2 class="interview-title">{{interview.title}}</h2>
+        <p class="interview-description" id="shareable">{{interview.content}}</p>
+      </div>
+      <button class="interview-button">READ THE INTERVIEW =></button>
+    </div>
+    <div class="img-container">
+      <img class="portrait-image" src="{{interview.image}}" alt="A cute photo of a pup">
+    </div>
   </div>
 </div>
