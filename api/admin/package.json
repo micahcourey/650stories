@@ -1,26 +1,26 @@
 {
-  "_from": "strapi-admin@3.0.0-alpha.9.1",
-  "_id": "strapi-admin@3.0.0-alpha.9.1",
+  "_from": "strapi-admin@3.0.0-alpha.10.1",
+  "_id": "strapi-admin@3.0.0-alpha.10.1",
   "_inBundle": false,
-  "_integrity": "sha512-JBQ8gZ2j+nJYdUdpKNGlxR3G+4rMtG87jzakBoMKZq2pb9bfTbqa6Fu+szGrLGUzCuGoNMon96Sug9VOTS31xQ==",
+  "_integrity": "sha512-b+qDHvrDBplgAeaDsrOs0DtGywAYlaE+3GTLawDBsjyAAsPum8dbnBqHZxkzzV+3/hbcwQyYogsgHnDO8X9ClA==",
   "_location": "/strapi/strapi-admin",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "strapi-admin@3.0.0-alpha.9.1",
+    "raw": "strapi-admin@3.0.0-alpha.10.1",
     "name": "strapi-admin",
     "escapedName": "strapi-admin",
-    "rawSpec": "3.0.0-alpha.9.1",
+    "rawSpec": "3.0.0-alpha.10.1",
     "saveSpec": null,
-    "fetchSpec": "3.0.0-alpha.9.1"
+    "fetchSpec": "3.0.0-alpha.10.1"
   },
   "_requiredBy": [
     "/strapi/strapi-generate-admin"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-admin/-/strapi-admin-3.0.0-alpha.9.1.tgz",
-  "_shasum": "5f2e2487a057333d2c5d05396baddacff6daa9b6",
-  "_spec": "strapi-admin@3.0.0-alpha.9.1",
+  "_resolved": "https://registry.npmjs.org/strapi-admin/-/strapi-admin-3.0.0-alpha.10.1.tgz",
+  "_shasum": "d92bbace5fc89617616bc4506e2bb538a1de4c0c",
+  "_spec": "strapi-admin@3.0.0-alpha.10.1",
   "_where": "/home/micah/.nvm/versions/node/v8.9.4/lib/node_modules/strapi/node_modules/strapi-generate-admin",
   "author": {
     "name": "Strapi"
@@ -36,8 +36,8 @@
   "description": "Strapi Admin",
   "devDependencies": {
     "sanitize.css": "^4.1.0",
-    "strapi-helper-plugin": "3.0.0-alpha.9.1",
-    "strapi-utils": "3.0.0-alpha.9.1"
+    "strapi-helper-plugin": "3.0.0-alpha.10.1",
+    "strapi-utils": "3.0.0-alpha.10.1"
   },
   "engines": {
     "node": ">= 8.0.0",
@@ -71,5 +71,5 @@
     "start": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development PORT=4000 IS_ADMIN=true node ./node_modules/strapi-helper-plugin/lib/server",
     "test": "npm run lint"
   },
-  "version": "3.0.0-alpha.9.1"
+  "version": "3.0.0-alpha.10.1"
 }

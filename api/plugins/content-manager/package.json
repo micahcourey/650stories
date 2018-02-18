@@ -1,8 +1,8 @@
 {
   "_from": "strapi-plugin-content-manager@alpha",
-  "_id": "strapi-plugin-content-manager@3.0.0-alpha.9.1",
+  "_id": "strapi-plugin-content-manager@3.0.0-alpha.10.1",
   "_inBundle": false,
-  "_integrity": "sha512-1TscYJUssoerW3wRVaTHoHdjrJ6I81begZvvV7kUP50mUujxOa8dbnkGWu9r0JknQeOTNIT4teX4vdJ0nzgf1g==",
+  "_integrity": "sha512-kchyhR/u/RPTdEdB+FACGRES42nHVye2WvUJgO9Cxlc9dflBJIO1/R7O9BxVP+EA26TdmXwxTX0XOlmQdvUaxw==",
   "_location": "/strapi-plugin-content-manager",
   "_phantomChildren": {},
   "_requested": {
@@ -18,8 +18,8 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-plugin-content-manager/-/strapi-plugin-content-manager-3.0.0-alpha.9.1.tgz",
-  "_shasum": "d8046131451dcb0a89dffde5c9f69b57a6de5a80",
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-content-manager/-/strapi-plugin-content-manager-3.0.0-alpha.10.1.tgz",
+  "_shasum": "15e8d89c9b688054423eec1f05ac26185c7747f1",
   "_spec": "strapi-plugin-content-manager@alpha",
   "_where": "/home/micah/git/650stories/650stories",
   "author": {
@@ -35,7 +35,7 @@
   "description": "A powerful UI to easily manage your data.",
   "devDependencies": {
     "react-select": "^1.0.0-rc.5",
-    "strapi-helper-plugin": "3.0.0-alpha.9.1"
+    "strapi-helper-plugin": "3.0.0-alpha.10.1"
   },
   "engines": {
     "node": ">= 8.0.0",
@@ -75,5 +75,5 @@
     "icon": "plug",
     "description": "content-manager.plugin.description"
   },
-  "version": "3.0.0-alpha.9.1"
+  "version": "3.0.0-alpha.10.1"
 }

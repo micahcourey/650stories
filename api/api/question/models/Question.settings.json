@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "qanda",
+  "info": {
+    "name": "question",
+    "description": ""
+  },
+  "attributes": {
+    "question_text": {
+      "type": "text"
+    },
+    "interview_id": {
+      "collection": "interview",
+      "via": "questions"
+    },
+    "question_number": {
+      "type": "integer"
+    },
+    "answer_text": {
+      "type": "text"
+    }
+  }
+}

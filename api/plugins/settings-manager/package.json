@@ -1,8 +1,8 @@
 {
   "_from": "strapi-plugin-settings-manager@alpha",
-  "_id": "strapi-plugin-settings-manager@3.0.0-alpha.9.1",
+  "_id": "strapi-plugin-settings-manager@3.0.0-alpha.10.1",
   "_inBundle": false,
-  "_integrity": "sha512-mO1/nUy+f3tSNCedTa2U8uzz1flqOeDHNSeIl8BcNhMAqZKH0u3Rj2e6x+m2pirKnxJ6Ja3N0+oqFw7QOQYfjg==",
+  "_integrity": "sha512-bKRdI1SlDhztzBWUGLaSQjZI2xNwDNAD+WphlGIBKN7BRU9NX3IFGXR+zo0QkGRrTyxxzfhP449bkycodwwCTw==",
   "_location": "/strapi-plugin-settings-manager",
   "_phantomChildren": {},
   "_requested": {
@@ -18,8 +18,8 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-plugin-settings-manager/-/strapi-plugin-settings-manager-3.0.0-alpha.9.1.tgz",
-  "_shasum": "224c9dea6f49e4b7ce2138d2c8ebe49ae4c57f18",
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-settings-manager/-/strapi-plugin-settings-manager-3.0.0-alpha.10.1.tgz",
+  "_shasum": "3de05e4a6651a0c0bf9e3912c699a74681f230b7",
   "_spec": "strapi-plugin-settings-manager@alpha",
   "_where": "/home/micah/git/650stories/650stories",
   "author": {
@@ -36,7 +36,7 @@
   "devDependencies": {
     "flag-icon-css": "^2.8.0",
     "react-select": "^1.0.0-rc.5",
-    "strapi-helper-plugin": "3.0.0-alpha.9.1"
+    "strapi-helper-plugin": "3.0.0-alpha.10.1"
   },
   "engines": {
     "node": ">= 8.0.0",
@@ -76,5 +76,5 @@
     "icon": "wrench",
     "description": "settings-manager.plugin.description"
   },
-  "version": "3.0.0-alpha.9.1"
+  "version": "3.0.0-alpha.10.1"
 }

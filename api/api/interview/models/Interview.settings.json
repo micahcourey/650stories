@@ -1,24 +1,84 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "interview",
   "info": {
     "name": "interview",
     "description": ""
   },
   "attributes": {
-    "title": {
+    "author": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "interviewee_first_name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000
+    },
+    "title_image": {
+      "type": "string",
+      "required": true
+    },
+    "photographer": {
       "type": "string"
     },
-    "image": {
+    "photo_strip_image_1": {
       "type": "string"
     },
-    "content": {
+    "photo_strip_image_2": {
+      "type": "string"
+    },
+    "photo_strip_image_3": {
+      "type": "string"
+    },
+    "photo_strip_image_4": {
+      "type": "string"
+    },
+    "photo_strip_description": {
+      "type": "string"
+    },
+    "pair_image_1": {
+      "type": "string"
+    },
+    "pair_image_2": {
+      "type": "string"
+    },
+    "big_image": {
+      "type": "string"
+    },
+    "pair_image_description": {
+      "type": "string"
+    },
+    "big_image_description": {
+      "type": "string"
+    },
+    "pull_quote_1": {
       "type": "text"
     },
-    "author": {
-      "model": "permission",
-      "via": "articles",
-      "plugin": "users-permissions"
+    "pull_quote_2": {
+      "type": "string"
+    },
+    "pull_qoute_3": {
+      "type": "string"
+    },
+    "pull_quote_4": {
+      "type": "string"
+    },
+    "questions": {
+      "model": "question",
+      "via": "interview_id"
+    },
+    "interviewee_last_name": {
+      "type": "string"
     }
   }
 }
