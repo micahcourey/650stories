@@ -40,30 +40,28 @@
   margin: 0 5rem 5rem 5rem;
   background: #1cb1d7;
 }
-.article-container, .img-container {
+.article-container {
   width: 50%;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 6rem;
+  margin-right: 3rem;
 }
 .img-container {
   height: 456px;
   width: 456px;
   display: flex;
   align-items: flex-end;
+  margin-left: 3rem;
+  margin-right: 6rem;
 }
-.portrait-image {
-  width: 100%;
+.title-image {
+  width: 456px;
+  height: 456px;
   margin-bottom: -48px;
 }
 .article-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.interview-title {
-  font-size: 2rem;
-  font-family: DomaineDisplay-ExtraboldItalic;
-  margin: 2rem 0;
 }
 
 .interview-button {
@@ -81,7 +79,7 @@ button {
 }
 
 .interview-title {
-  font-family: DomaineDisplayTest;
+  font-family: DomaineDisplay-ExtraboldItalic;;
   font-size: 72px;
   font-weight: 800;
   font-style: italic;
@@ -93,8 +91,9 @@ button {
 }
 
 .interview-description {
+  margin-top: 2rem;
   font-family: Georgia;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;

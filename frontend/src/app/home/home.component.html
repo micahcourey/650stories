@@ -2,7 +2,7 @@
 
   <div class="header">
     <header-logo></header-logo>
-    <div *ngIf="showNav">Pretend I'm a navbar</div>
+    <!-- <div *ngIf="showNav">Pretend I'm a navbar</div> -->
     <div class="header-text">
       <h1>Inspiring</h1>
       <h1>interviews</h1>
@@ -14,13 +14,15 @@
   <div class="interview-box" [style.background]="interview.color" *ngFor="let interview of interviews">
     <div class="article-container">
       <div>
-        <h2 class="interview-title">{{interview.title}}</h2>
-        <p class="interview-description" id="shareable">{{interview.content}}</p>
+        <p>{{interview.date}}</p>
+        <h2 class="interview-title">{{interview.interviewee_first_name}}</h2>
+        <h2 class="interview-title">{{interview.interviewee_last_name}}</h2>
+        <p class="interview-description" id="shareable">{{interview.description}}</p>
       </div>
       <button class="interview-button">READ THE INTERVIEW =></button>
     </div>
     <div class="img-container">
-      <img class="portrait-image" src="{{interview.image}}" alt="A cute photo of a pup">
+      <img class="title-image" src="{{interview.title_image}}" alt="A cute photo of a pup">
     </div>
   </div>
 </div>
