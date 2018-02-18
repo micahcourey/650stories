@@ -1,0 +1,23 @@
+.story-button {
+  width: 240px;
+  height: 40px;
+  border: solid 4px #141410;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Metric-Semibold;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #141410;
+}
+.button-text {
+  margin-top: 2px;
+}
+.icon {
+  margin-left: 1rem;
+}

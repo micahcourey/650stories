@@ -6,13 +6,16 @@
     "description": ""
   },
   "attributes": {
-    "author": {
-      "type": "string",
-      "maxLength": 100
-    },
     "interviewee_first_name": {
       "type": "string",
       "required": true,
+      "maxLength": 100
+    },
+    "interviewee_last_name": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string",
       "maxLength": 100
     },
     "date": {
@@ -74,11 +77,8 @@
       "type": "string"
     },
     "questions": {
-      "model": "question",
+      "collection": "question",
       "via": "interview_id"
-    },
-    "interviewee_last_name": {
-      "type": "string"
     }
   }
 }

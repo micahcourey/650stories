@@ -15,6 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { InterviewComponent } from './interview/interview.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { HeaderLogoComponent } from './shared/header-logo/header-logo.component';
+import { InterviewCardsComponent } from './interview-cards/interview-cards.component';
+import { StoryButtonComponent } from './story-button/story-button.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HeaderLogoComponent } from './shared/header-logo/header-logo.component'
     AboutComponent,
     InterviewComponent,
     DirectoryComponent,
-    HeaderLogoComponent
+    HeaderLogoComponent,
+    InterviewCardsComponent,
+    StoryButtonComponent
   ],
   imports: [
     BrowserModule,

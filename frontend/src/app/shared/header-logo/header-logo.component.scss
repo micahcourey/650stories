@@ -4,7 +4,7 @@
   align-items: center;
 }
 .logo-container {
-  width: 1600px;
+  width: 100%;
   height: 96px;
 }
 .frame {
@@ -47,4 +47,8 @@
   letter-spacing: 2px;
   text-align: left;
   color: #141410;
+}
+.svg-icon {
+  background-repeat: no-repeat;
+  // background-image: url(../../../assets/icons/icons.svg);
 }

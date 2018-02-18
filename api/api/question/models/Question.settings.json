@@ -10,7 +10,7 @@
       "type": "text"
     },
     "interview_id": {
-      "collection": "interview",
+      "model": "interview",
       "via": "questions"
     },
     "question_number": {

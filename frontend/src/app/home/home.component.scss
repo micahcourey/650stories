@@ -14,7 +14,7 @@
 }
 .header-text {
   margin-top: 4rem;
-  width: 1128px;
+  width: 70.5vw;
   height: 608px;
   font-family: DomaineDisplay-ExtraboldItalic;
   font-size: 160px;
@@ -31,76 +31,6 @@
   height: 1024px;
   opacity: 0.01;
   background-color: #141410;
-}
-.interview-box {
-  display: flex;
-  justify-content: space-between;
-  width: 1128px;
-  height: 480px;
-  margin: 0 5rem 5rem 5rem;
-  background: #1cb1d7;
-}
-.article-container {
-  width: 50%;
-  margin-left: 6rem;
-  margin-right: 3rem;
-}
-.img-container {
-  height: 456px;
-  width: 456px;
-  display: flex;
-  align-items: flex-end;
-  margin-left: 3rem;
-  margin-right: 6rem;
-}
-.title-image {
-  width: 456px;
-  height: 456px;
-  margin-bottom: -48px;
-}
-.article-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.interview-button {
-  justify-content: flex-end;
-  margin-bottom: -24px;
-}
-
-button {
-  width: 240px;
-  height: 48px;
-  border: solid 4px #141410;
-  font-family: MetricTest;
-  font-weight: 700;
-  background: transparent;
-}
-
-.interview-title {
-  font-family: DomaineDisplay-ExtraboldItalic;;
-  font-size: 72px;
-  font-weight: 800;
-  font-style: italic;
-  font-stretch: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-}
-
-.interview-description {
-  margin-top: 2rem;
-  font-family: Georgia;
-  font-size: 1rem;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
 }
 
 .arrow-main {
