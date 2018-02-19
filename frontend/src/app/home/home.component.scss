@@ -33,20 +33,22 @@
   background-color: #141410;
 }
 
-.arrow-main {
-  width: 15px;
-  height: 2px;
-  background-color: #141410;
+.sub-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70.5vw;
+  height: 112px;
+  background-color: #ffffff;
 }
-.arrow-right {
-  width: 8px;
-  height: 2px;
-  transform: rotate(-45deg);
-  background-color: #141410;
+.interview-count {
+  font-family: Georgia;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #141410;
 }
-.arrow-left {
-  width: 8px;
-  height: 2px;
-  transform: rotate(45deg);
-  background-color: #141410;
-} 
