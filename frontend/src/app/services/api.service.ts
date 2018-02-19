@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -11,6 +11,10 @@ export class ApiService {
 
   constructor(private http: HttpClient) { 
     this.apiUrl = 'http://localhost:1337/';
+  }
+
+  getOptions() {
+    return { headers: new HttpHeaders().set('append', 'key=AIzaSyA5dg6bA_5AhoNl3DkqPxdN1nxfUPk68W0')};
   }
 
   extractData(res: Response) {
