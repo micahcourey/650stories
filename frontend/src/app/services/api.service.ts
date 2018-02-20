@@ -10,7 +10,7 @@ export class ApiService {
   private data: Array<any>;
 
   constructor(private http: HttpClient) { 
-    this.apiUrl = 'http://localhost:1337/';
+    this.apiUrl = 'http://159.65.78.102/';
   }
 
   getOptions() {

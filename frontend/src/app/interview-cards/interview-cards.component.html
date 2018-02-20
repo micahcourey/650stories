@@ -3,20 +3,22 @@
   *ngFor="let interview of interviews; let i = index"
   [ngClass]="{'interview-box-reversed': i % 2 != 0}">
   <div class="article-container">
-    <div>
+    <div class="interview-content"> 
       <p class="interview-date">{{interview.date | date:'MMMM d, y' | uppercase}}</p>
       <h2 class="interview-title">{{interview.interviewee_first_name}}</h2>
       <h2 class="interview-title">{{interview.interviewee_last_name}}</h2>
+      <div class="mobile-image-container image-mobile">
+        <img class="title-image" src="{{interview.title_image}}" alt="A portrait photo of the interviewee">
+      </div>
       <p class="interview-description" id="shareable">{{interview.short_description}}</p>
     </div>
     <div class="interview-button">
-
       <story-button>
         READ THE INTERVIEW
       </story-button>
     </div>
   </div>
-  <div class="img-container">
+  <div class="image-container image-desktop">
     <img class="title-image" src="{{interview.title_image}}" alt="A portrait photo of the interviewee">
   </div>
 </div>

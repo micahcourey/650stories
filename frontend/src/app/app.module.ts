@@ -17,6 +17,7 @@ import { DirectoryComponent } from './directory/directory.component';
 import { HeaderLogoComponent } from './shared/header-logo/header-logo.component';
 import { InterviewCardsComponent } from './interview-cards/interview-cards.component';
 import { StoryButtonComponent } from './story-button/story-button.component';
+import { StoryFooterComponent } from './story-footer/story-footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { StoryButtonComponent } from './story-button/story-button.component';
     DirectoryComponent,
     HeaderLogoComponent,
     InterviewCardsComponent,
-    StoryButtonComponent
+    StoryButtonComponent,
+    StoryFooterComponent
   ],
   imports: [
     BrowserModule,
