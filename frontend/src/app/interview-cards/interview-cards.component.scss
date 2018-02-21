@@ -85,18 +85,107 @@
   color: #141410;
   margin-bottom: 2rem;
 }
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .image-mobile {
     display: none !important;
   }
 }
-@media (max-width: 899px) {
+@media (max-width: 701px) {
   .image-desktop {
     display: none !important;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1400px) {
+  .interview-box {
+    width: 86vw;
+    height: 410px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .image-container {
+    height: 380px;
+    width: 100%;
+
+    max-width: 380px;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+  }
+  .title-image {
+    width: 100%;
+    height: 380px;
+    margin-bottom: -48px;
+  }
+  .article-container {
+    width: 100%;
+    height: 100%;
+    // padding-top: 1rem;
+    margin-left: 3rem;
+    margin-right: 1.5rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .interview-box {
+    width: 74vw;
+  }
+}
+
+/**************************
+      Tablet Styles
+**************************/
+@media (max-width: 1000px) {
+  .interview-box {
+    width: 90vw;
+    height: 385px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .article-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+    margin-left: 3rem;
+    margin-right: 1.5rem;
+  }
+  .image-container {
+    height: 360px;
+    width: 100%;
+
+    max-width: 360px;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+  }
+  .interview-title {
+    font-size: 3rem;
+  }
+  .interview-date {
+    font-size: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .title-image {
+    width: 100%;
+    height: 360px;
+    margin-bottom: -48px;
+  }
+
+  .interview-button {
+    margin-bottom: -8px;
+  }
+}
+
+/**************************
+      Mobile Styles
+**************************/
+@media (max-width: 700px) {
   .interview-box {
     width: 86vw;
     height: 704px;
@@ -138,17 +227,21 @@
   }
   .mobile-image-container {
     margin-top: 1rem;
-    height: 336px;
+    height: 100%;
     width: 100%;
- 
+    max-width:  400px;
+    max-height:  400px;
   }
   .title-image {
     width: 100%;
-    height: 336px;
+    height: 100%;
+    max-height:  400px;
+    max-width:  400px;
     margin-bottom: -48px;
   }
   .interview-description {
-    margin-top: 1rem;
+    height: 100%;
+    margin-top: 4rem;
     margin-right: 2rem;
   }
   .interview-button {

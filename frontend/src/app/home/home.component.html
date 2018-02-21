@@ -1,7 +1,8 @@
 <div class="home-container">
+      <!-- <div *ngIf="showNav">Pretend I'm a navbar</div> -->
   <div class="header">
     <header-logo></header-logo>
-    <!-- <div *ngIf="showNav">Pretend I'm a navbar</div> -->
+    
     <div class="header-text">
       <h1>Inspiring</h1>
       <h1>interviews</h1>
@@ -9,14 +10,18 @@
       <h1>Area Code.</h1>
     </div>
   </div>
+
   <div class="card-container" *ngIf="interviews.length > 0">
     <interview-cards [interviews]="interviews"></interview-cards>
   </div>
+
   <div class="sub-footer">
     <div class="sub-content">
       <h4 class="interview-count">{{interviews.length}} interviews and counting</h4>
       <story-button>VIEW ALL <span class="desktop-text">INTERVIEWS</span></story-button>
     </div>
   </div>
+
   <story-footer></story-footer>
+
 </div>
