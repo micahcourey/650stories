@@ -18,6 +18,7 @@ import { HeaderLogoComponent } from './shared/header-logo/header-logo.component'
 import { InterviewCardsComponent } from './interview-cards/interview-cards.component';
 import { StoryButtonComponent } from './story-button/story-button.component';
 import { StoryFooterComponent } from './story-footer/story-footer.component';
+import { StoryHeaderComponent } from './shared/story-header/story-header.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { StoryFooterComponent } from './story-footer/story-footer.component';
     HeaderLogoComponent,
     InterviewCardsComponent,
     StoryButtonComponent,
-    StoryFooterComponent
+    StoryFooterComponent,
+    StoryHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,7 @@
   margin-left: 3rem;
   margin-right: 6rem;
 }
-.interview-box-reversed > .img-container {
+.interview-box-reversed > .image-container {
   margin-left: 6rem;
   margin-right: 3rem;
 }
@@ -57,10 +57,9 @@
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-}
-  
+} 
 .interview-description {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-family: Georgia;
   font-size: 1rem;
   font-weight: normal;
@@ -71,7 +70,6 @@
   text-align: left;
   color: #ffffff;
 }
-
 .interview-date {
   opacity: 0.4;
   font-family: Metric-Semibold;
@@ -110,7 +108,6 @@
   .image-container {
     height: 380px;
     width: 100%;
-
     max-width: 380px;
     margin-left: 1.5rem;
     margin-right: 3rem;
@@ -122,8 +119,16 @@
   }
   .article-container {
     width: 100%;
-    height: 100%;
+    height: 342px;
     // padding-top: 1rem;
+    margin-left: 3rem;
+    margin-right: 1.5rem;
+  }
+  .interview-box-reversed > .article-container {
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+  }
+  .interview-box-reversed > .image-container {
     margin-left: 3rem;
     margin-right: 1.5rem;
   }
@@ -156,12 +161,19 @@
     margin-right: 1.5rem;
   }
   .image-container {
+    // height: 100%;
+    // width: 100%;
     height: 360px;
-    width: 100%;
-
-    max-width: 360px;
+    width: 360px;
     margin-left: 1.5rem;
     margin-right: 3rem;
+  }
+  .title-image {
+    // height: 100%;
+    // width: 100%;
+    height: 360px;
+    width: 360px;
+    margin-bottom: -48px;
   }
   .interview-title {
     font-size: 3rem;
@@ -171,11 +183,6 @@
     margin-bottom: 1rem;
   }
 
-  .title-image {
-    width: 100%;
-    height: 360px;
-    margin-bottom: -48px;
-  }
 
   .interview-button {
     margin-bottom: -8px;

@@ -1,0 +1,19 @@
+  
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .member-container {
+    margin: 2rem 1rem;
+  }
+  .member-image-container {
+    width: 336px;
+    height: 336px;
+    background: purple;
+  }

@@ -1,3 +1,18 @@
-<p>
-  about works!
-</p>
+<story-header></story-header>
+<div class="description">
+  <h6>ABOUT THE PROJECT</h6>  
+  <h4>650 Stories is an interview series featuring inspiring people from in and around the 650 area code. Also known as The Peninsula, this region just south of San Francisco is home to painters and particle physicists, Pez collectors and orchestra conductors.</h4>
+</div>
+<div class="team-container">
+  <h6>THE TEAM</h6>
+  <div class="team">
+    <div class="member-container" *ngFor="let teamMember of teamMembers">
+      <div class="member-image-container">
+
+      </div>
+      <h4 class="member-name">{{teamMember.name}}</h4>
+      <p>{{teamMember.description}}</p>
+      <a [href]="teamMember.link">{{teamMember.linkName}}</a>
+    </div>
+  </div>
+</div> 
