@@ -2,7 +2,7 @@
   .team-container {
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    margin: 3rem 1rem 0 2rem;
   }
   .team {
     display: flex;
@@ -10,7 +10,7 @@
     align-content: center;
   }
   .member-container {
-    margin: 2rem 1rem;
+    margin: 2rem 0;
   }
   .member-image-container {
     width: 336px;
