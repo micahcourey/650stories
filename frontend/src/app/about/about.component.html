@@ -1,7 +1,7 @@
 <story-header></story-header>
 <div class="description-container">
   <h6 class="about-header">ABOUT THE PROJECT</h6>  
-  <h4 class="about-description">650 Stories is an interview series featuring inspiring people from in and around the 650 area code. Also known as The Peninsula, this region just south of San Francisco is home to painters and particle physicists, Pez collectors and orchestra conductors.</h4>
+  <h4 class="about-h4">650 Stories is an interview series featuring inspiring people from in and around the 650 area code. Also known as The Peninsula, this region just south of San Francisco is home to painters and particle physicists, Pez collectors and orchestra conductors.</h4>
 </div>
 <div class="team-container">
   <h6 class="about-header">THE TEAM</h6>
@@ -10,9 +10,10 @@
       <div class="member-image-container">
 
       </div>
-      <h4 class="member-name">{{teamMember.name}}</h4>
-      <p>{{teamMember.description}}</p>
-      <a [href]="teamMember.link">{{teamMember.linkName}}</a>
+      <h4 class="about-h4">{{teamMember.name}}</h4>
+      <p class="member-title">{{teamMember.position}}</p>
+      <p class="description-text">{{teamMember.description}}</p>
+      <a class="link-text" [href]="teamMember.link">{{teamMember.linkName}}</a>
     </div>
   </div>
 </div> 
