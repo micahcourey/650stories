@@ -1,19 +1,56 @@
   
-  .team-container {
-    display: flex;
-    flex-direction: column;
-    margin: 3rem 1rem 0 2rem;
-  }
-  .team {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-  }
-  .member-container {
-    margin: 2rem 0;
-  }
-  .member-image-container {
-    width: 336px;
-    height: 336px;
-    background: purple;
-  }
+  
+.description-container {
+  margin: 1rem;
+}
+.about-text {
+  font-family: Georgia;
+  font-size: 1.5rem;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: #141410;
+}
+.about-header {
+  opacity: 0.4;
+  font-family: Metric-Semibold;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 4px;
+  text-align: left;
+  color: #141410;
+}
+.team-container {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 1rem 0 1rem;
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.member-container {
+  margin: 2rem 0;
+}
+.member-image-container {
+  width: 336px;
+  height: 336px;
+  margin-bottom: 2rem;
+  background: purple;
+}
+.member-name {
+  font-family: Georgia;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: #141410;
+}
+  
