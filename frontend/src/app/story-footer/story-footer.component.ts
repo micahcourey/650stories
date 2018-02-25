@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'story-footer',
@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./story-footer.component.scss']
 })
 export class StoryFooterComponent implements OnInit {
+  @Input() fullwidth: boolean;
 
-  constructor() { }
+  constructor() {
+    this.fullwidth = false;
+  }
 
   ngOnInit() {
   }

@@ -1,19 +1,39 @@
-<story-header></story-header>
-<div class="description-container">
-  <h6 class="about-header">ABOUT THE PROJECT</h6>  
-  <h4 class="about-h4">650 Stories is an interview series featuring inspiring people from in and around the 650 area code. Also known as The Peninsula, this region just south of San Francisco is home to painters and particle physicists, Pez collectors and orchestra conductors.</h4>
-</div>
-<div class="team-container">
-  <h6 class="about-header">THE TEAM</h6>
-  <div class="team">
-    <div class="member-container" *ngFor="let teamMember of teamMembers">
-      <div class="member-image-container">
-
+<div class="about-container">
+  <div class="header-container">
+    <story-header></story-header>
+  </div>
+ 
+  <div class="description-container">
+    <h6 class="about-header">About the team</h6>  
+    <h4 class="about-h4">650 Stories is an interview series featuring inspiring people from in and around the 650 area code. Also known as The Peninsula, this region just south of San Francisco is home to painters and particle physicists, Pez collectors and orchestra conductors.</h4>
+  </div>
+  <div class="team-container">
+    <h6 class="about-header">The team</h6>
+    <div class="team">
+      <div class="member-container" *ngFor="let teamMember of teamMembers">
+        <div class="member-image-container">
+          <img class="member-image" src="{{teamMember.imageUrl}}" alt="A portrait of {{teamMember.name}}">
+        </div>
+        <h4 class="about-h4">{{teamMember.name}}</h4>
+        <p class="member-title">{{teamMember.position}}</p>
+        <p class="description-text">{{teamMember.description}}</p>
+        <div *ngIf="teamMember.linkName" class="link-text">
+          {{teamMember.linkName}}
+          <div class="link-bg"></div>
+        </div>
       </div>
-      <h4 class="about-h4">{{teamMember.name}}</h4>
-      <p class="member-title">{{teamMember.position}}</p>
-      <p class="description-text">{{teamMember.description}}</p>
-      <a class="link-text" [href]="teamMember.link">{{teamMember.linkName}}</a>
+      <div class="about-subfooter">
+          <h6 class="about-header">Interviews</h6>
+          <h4 class="about-h4">If you have a suggestion for an interview subject, please email us at:</h4>
+          <div class="email">
+            <h4 class="about-h4">interviews@650stories.com</h4>
+            <div class="link-bg"></div>
+          </div>
+      </div>
+      <div class="footer-container">
+        <story-footer [fullwidth]="true"></story-footer>
+      </div>
+
     </div>
   </div>
 </div> 
