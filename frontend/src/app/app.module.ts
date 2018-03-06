@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
+// ROUTING
 import { routing } from './app.routing';
 
 // SERVICES
@@ -19,6 +21,7 @@ import { InterviewCardsComponent } from './interview-cards/interview-cards.compo
 import { StoryButtonComponent } from './story-button/story-button.component';
 import { StoryFooterComponent } from './story-footer/story-footer.component';
 import { StoryHeaderComponent } from './shared/story-header/story-header.component';
+import { StoryNavComponent } from './shared/story-nav/story-nav.component';
 
 @NgModule({
   declarations: [
@@ -31,17 +34,20 @@ import { StoryHeaderComponent } from './shared/story-header/story-header.compone
     InterviewCardsComponent,
     StoryButtonComponent,
     StoryFooterComponent,
-    StoryHeaderComponent
+    StoryHeaderComponent,
+    StoryNavComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     routing,
+    FormsModule,
   ],
   providers: [
     AppComponent,
     ApiService,
     HttpClientModule,
+    FormsModule,
   ],
   bootstrap: [AppComponent]
 })

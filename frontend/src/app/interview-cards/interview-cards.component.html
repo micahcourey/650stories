@@ -1,4 +1,4 @@
-<div class="interview-box" 
+<div class="interview-box {{classes}}" 
   [style.background]="interview.color"
   *ngFor="let interview of interviews; let i = index"
   [ngClass]="{'interview-box-reversed': i % 2 != 0}">
@@ -13,7 +13,7 @@
       <p class="interview-description" id="shareable">{{interview.short_description}}</p>
     </div>
     <div class="interview-button">
-      <story-button>
+      <story-button routerLink="/interview">
         READ THE INTERVIEW
       </story-button>
     </div>

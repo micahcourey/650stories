@@ -1,0 +1,13 @@
+<div class="nav-container">
+  <div class="links">
+    <div routerLink="/" class="home">
+      <img src="/assets/icons/Logo.svg" alt="650 Stories logo">
+    </div>
+    <div class="right-links">
+      <h6 routerLink="/directory">Interview Directory</h6>
+      <h6 routerLink="/about">About The Project</h6>
+    </div>
+  </div>
+  <div [ngClass]="{'selected-about': selectedTab === 'about', 'selected-home': selectedTab === 'home', 'selected-directory': selectedTab === 'directory'}"></div>
+  <div class="line"></div>
+</div>

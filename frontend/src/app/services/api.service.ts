@@ -33,8 +33,8 @@ export class ApiService {
       console.log(data);
       data.forEach(interview => {
         interviews.push(interview);
-      })
-    })
+      });
+    });
     return interviews;
   }
 

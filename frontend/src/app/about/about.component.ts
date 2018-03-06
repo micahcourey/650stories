@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 interface TeamMember {
   name: string;
@@ -17,9 +17,23 @@ interface TeamMember {
 export class AboutComponent implements OnInit {
 
   teamMembers: Array<TeamMember>;
+  showNav = false;
 
-  constructor() { 
-    this.teamMembers = [
+  constructor() {
+    this.teamMembers = this.getTeamMembers();
+  }
+
+  ngOnInit() {
+  }
+
+  @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
+    if (!this.showNav) {
+      this.showNav = true;
+    }
+  }
+
+  getTeamMembers() {
+    return [
       {
         name: 'Anisse Gross', 
         position: 'Writer', 
@@ -68,11 +82,7 @@ export class AboutComponent implements OnInit {
         link: 'https://burlingameproperties.com/',
         linkName: 'burlingameproperties.com'
       }
-
     ];
   }
-
-  ngOnInit() {
-  }
-
+  
 }

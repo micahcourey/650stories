@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'story-header',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./story-header.component.scss']
 })
 export class StoryHeaderComponent implements OnInit {
-
+  @Input() title: string;
+  
   constructor() { }
 
   ngOnInit() {

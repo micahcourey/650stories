@@ -60,9 +60,12 @@
 }
 @media (min-width: 1100px) and (max-width: 1415px) {
   .header-text {
-    width: 80vw;
+    width: 74vw;
     min-height: 600px;
-    font-size: 140px;
+    font-size: 130px;
+  }
+  .sub-footer {
+    width: 74vw;
   }
 }
 
@@ -87,14 +90,14 @@
   .sub-footer {
     width: 86vw;
   }
-  .sub-content {
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 1rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
+  // .sub-content {
+  //   flex-direction: column;
+  //   justify-content: flex-end;
+  //   align-items: center;
+  //   margin-top: 1rem;
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
 
   .card-container {
     width: 100%;

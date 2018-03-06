@@ -1,6 +1,9 @@
+<div *ngIf="showNav" class="navbar-container">
+  <story-nav [selectedTab]="'about'"></story-nav>
+</div>
 <div class="about-container">
   <div class="header-container">
-    <story-header></story-header>
+    <story-header [title]="'650 Stories'"></story-header>
   </div>
  
   <div class="description-container">
@@ -11,8 +14,10 @@
     <h6 class="about-header">The team</h6>
     <div class="team">
       <div class="member-container" *ngFor="let teamMember of teamMembers">
-        <div class="member-image-container">
-          <img class="member-image" src="{{teamMember.imageUrl}}" alt="A portrait of {{teamMember.name}}">
+        <div class="member-image-container" [ngClass]="{'logo-image': teamMember.name === 'Raziel Ungar Team'}">
+          <img *ngIf="teamMember.imageUrl !== ''" class="member-image" src="{{teamMember.imageUrl}}" alt="A portrait of {{teamMember.name}}">
+          <div *ngIf="teamMember.imageUrl === ''" class="member-image"></div>
+          <img class="pacific-logo" *ngIf="teamMember.name === 'Raziel Ungar Team'" src="https://s3-us-west-1.amazonaws.com/650stories/about_portraits/pacific_union_logo.png" alt="Pacific Union International logo">
         </div>
         <h4 class="about-h4">{{teamMember.name}}</h4>
         <p class="member-title">{{teamMember.position}}</p>

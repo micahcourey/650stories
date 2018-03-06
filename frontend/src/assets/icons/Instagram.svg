@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Instagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1190.000000, -2830.000000)">
+        <g id="Footer" transform="translate(236.000000, 2816.000000)" fill="#000000">
+            <g id="Follow" transform="translate(865.000000, 0.000000)">
+                <g id="Instagram" transform="translate(75.000000, 0.000000)">
+                    <g id="Instagram-Icon" transform="translate(12.000000, 12.000000)">
+                        <path d="M12,9 C10.343,9 9,10.343 9,12 C9,13.657 10.343,15 12,15 C13.657,15 15,13.657 15,12 C15,10.343 13.657,9 12,9 M12,7 C14.762,7 17,9.239 17,12 C17,14.762 14.762,17 12,17 C9.239,17 7,14.762 7,12 C7,9.239 9.239,7 12,7 M17.25,5.5 C17.94,5.5 18.5,6.06 18.5,6.75 C18.5,7.44 17.94,8 17.25,8 C16.56,8 16,7.44 16,6.75 C16,6.06 16.56,5.5 17.25,5.5 M7.6,4 C5.612,4 4,5.612 4,7.6 L4,16.4 C4,18.39 5.61,20 7.6,20 L16.4,20 C18.389,20 20,18.389 20,16.4 L20,7.6 C20,5.61 18.39,4 16.4,4 L7.6,4 M7.8,2 L16.2,2 C19.4,2 22,4.6 22,7.8 L22,16.2 C22,19.403 19.403,22 16.2,22 L7.8,22 C4.6,22 2,19.4 2,16.2 L2,7.8 C2,4.597 4.597,2 7.8,2" id="Instagram"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,5 +1,8 @@
+<div *ngIf="showNav" class="navbar-container">
+  <story-nav></story-nav>
+</div>
 <div class="home-container">
-      <!-- <div *ngIf="showNav">Pretend I'm a navbar</div> -->
+
   <div class="header">
     <header-logo></header-logo>
     
@@ -18,7 +21,7 @@
   <div class="sub-footer">
     <div class="sub-content">
       <h4 class="interview-count">{{interviews.length}} interviews and counting</h4>
-      <story-button>VIEW ALL <span class="desktop-text">INTERVIEWS</span></story-button>
+      <story-button routerLink="/directory">VIEW ALL <span class="desktop-text">INTERVIEWS</span></story-button>
     </div>
   </div>
 

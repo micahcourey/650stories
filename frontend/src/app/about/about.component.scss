@@ -109,12 +109,15 @@
     align-items: center;
     background: linear-gradient(to right, #fafaf9 0%,#fafaf9 20.75%,#fafaf9 20.75%,white 20.75%,white 100%);
   }
+  .description-container > .about-h4 {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
   .description-container, .team-container, .footer-container {
     max-width: 1152px;
   }
-  .description-container, .team-container > .about-header {
-    margin-right: 46px;
-    margin-left: 46px;
+  .about-header {
+    margin-left: 12px;
   }
   .team-container {
     margin: 3rem 0 0 0;
@@ -141,5 +144,28 @@
   .footer-container {
     width: 100%;
     margin: 5rem 12px 12px 12px;
+  }
+  .logo-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #141410;
+  }
+  .logo-image > .member-image {
+    width: 260px;
+    height: auto;
+    margin-bottom: 3rem;
+  }
+  .logo-image > .pacific-logo {
+    width: 148px;
+    height: auto;
+  }
+  
+  @media (max-width: 1166px) {
+    .description-container, .team-container, .footer-container {
+      max-width: 768px;
+    }
+
   }
 }

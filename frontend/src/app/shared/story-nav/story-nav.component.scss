@@ -1,0 +1,72 @@
+.nav-container {
+  height: 72px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px 0;
+  background: #fff;
+}
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 4px;
+}
+.right-links {
+  display: flex;
+  flex-direction: row;
+}
+.right-links > h6 {
+  margin: 1rem;
+  font-family: Metric-Semibold;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.63;
+  letter-spacing: 2px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #141410;
+}
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: #ecece8;
+  align-self: flex-end;
+}
+.selected-home {
+  width: 25vw;
+  height: 4px;
+  background-color: #1cb1d7;
+  margin-bottom: -8px;
+  z-index: 10000;
+}
+.selected-about {
+  width: 29vw;
+  height: 4px;
+  align-self: flex-end;
+  background-color: #1cb1d7;
+  margin-bottom: -8px;
+  z-index: 10000;
+}
+.selected-directory {
+  width: 25vw;
+  height: 4px;
+  align-self: flex-end;
+  background-color: #1cb1d7;
+  margin-bottom: -8px;
+  margin-right: 29vw;
+  z-index: 10000;
+}
+.home, .right-links > h6 {
+  cursor: pointer;
+} 
+
+@media (max-width: 799px) {
+  .nav-container {
+    display: none;
+  }
+}

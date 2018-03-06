@@ -1,0 +1,134 @@
+.directory-container {
+  background: linear-gradient(to right, #fafaf9 0%,#fafaf9 24.5%,#fafaf9 24.5%,white 24.5%,white 100%);
+}
+.header-container {
+  width: 100%;
+}
+.card-container {
+  width: 100%;
+  margin-top: -64px;
+  display: flex;
+  justify-content: center;
+}
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -24px;
+}
+.filter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: solid 4px #141410;
+  margin-right: 1.2rem;
+  cursor: pointer;
+}
+.directory-subfooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 36px;
+}
+.directory-subfooter > h3 {
+  font-family: Georgia;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #141410;
+}
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+input {
+  width: 100%;
+  height: 40px;
+  border: solid 4px #141410;
+  padding-left: 12px;
+}
+input::placeholder {
+  opacity: 0.4;
+  font-family: Georgia;
+  font-size: 16px;
+  line-height: 3;
+  color: #141410;
+}
+.input-button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #141410;
+  color: #fff;
+  cursor: pointer;
+}
+.input-button > img {
+  margin-right: 4px;
+}
+.footer-container {
+  margin: 5rem 16px 12px 16px;
+}
+
+.filter-overlay {
+  position: fixed; 
+  width: 100%;
+  height: 100%; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0.96;
+  background-color: #141410;
+}
+.overlay-container {
+  display: flex;
+  flex-direction: column;
+  margin: 56px 20px 43px 20px;
+  text-transform: uppercase;
+}
+h5 {
+  opacity: 0.4;
+  font-family: Metric-Semibold;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.overlay-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: fit-content;
+  border: solid 4px #ffffff;
+  color: #fff;
+  padding: 0 1rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  font-family: Metric-Semibold;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 2px;
+  z-index: 3;
+}
+.overlay-button-active {
+  background: #fff !important;
+  color: #2b2b27 !important;
+}
+.sort-container {
+  margin-top: 2rem;
+}
+.filter {
+  position: absolute;
+  bottom: 43px;
+  align-self: center;
+}

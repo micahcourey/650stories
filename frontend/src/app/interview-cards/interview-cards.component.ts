@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class InterviewCardsComponent implements OnInit {
   @Input() interviews: Array<any>;
+  @Input() classes: string;
   
   boxColors: Array<any>;
 

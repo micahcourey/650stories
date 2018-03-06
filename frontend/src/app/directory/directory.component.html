@@ -1,3 +1,57 @@
-<p>
-  directory works!
-</p>
+<div *ngIf="showNav" class="navbar-container">
+  <story-nav [selectedTab]="'directory'"></story-nav>
+</div>
+
+<div class="directory-container">
+  <div class="header-container">
+    <story-header [title]="'Interviews'"></story-header>
+  </div>
+
+  <div class="filters">
+    <div class="filter-button" (click)="toggleFilters()">
+      <img src="/assets/icons/Filter.svg" alt="arrow pointing right">
+    </div>
+  </div>
+
+  <div class="card-container" *ngIf="interviews.length > 0">
+    <interview-cards [interviews]="interviews"></interview-cards>
+  </div>
+
+  <div class="directory-subfooter">
+    <h3>Subscribe and never miss an interview</h3>
+    <div class="input-container">
+      <input [(ngModel)]="userEmail" type="email" placeholder="your email address" (keyup.enter)="submitEmail()" />
+      <div class="input-button"  (click)="submitEmail()">
+        <img src="/assets/icons/Arrow-fff.svg" alt="arrow pointing right">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-container">
+    <story-footer [fullwidth]="true"></story-footer>
+  </div>
+</div>
+
+<div *ngIf="showFilters" class="filter-overlay">
+  <div class="overlay-container">
+    <h5>Filter</h5>
+    <div *ngFor="let button of overlayButtons" class="overlay-button"
+      [ngClass]="{'overlay-button-active': button.selected }"
+      (click)="toggleFilterButton(button.title)">
+      {{button.title}}
+    </div>
+    
+    <div class="sort-container">
+      <h5 class="sort">Sort</h5>
+      <select class="overlay-button" name="sort">
+        <option value="mostRecent">most recent</option>
+      </select>
+    </div>
+
+    <div class="overlay-button filter" (click)="toggleFilters()">
+      filter
+    </div>
+  </div>
+
+</div>
