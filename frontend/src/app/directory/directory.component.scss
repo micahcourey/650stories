@@ -73,7 +73,6 @@ input::placeholder {
 .footer-container {
   margin: 5rem 16px 12px 16px;
 }
-
 .filter-overlay {
   position: fixed; 
   width: 100%;
@@ -119,6 +118,7 @@ h5 {
   line-height: 1;
   letter-spacing: 2px;
   z-index: 3;
+  text-transform: uppercase;
 }
 .overlay-button-active {
   background: #fff !important;
@@ -131,4 +131,55 @@ h5 {
   position: absolute;
   bottom: 43px;
   align-self: center;
+}
+
+@media (max-width: 600px) {
+  .desktop-filters {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .directory-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #fafaf9 0%,#fafaf9 20.75%,#fafaf9 20.75%,white 20.75%,white 100%);
+  }
+  .card-container {
+    margin-top: 60px;
+  }
+  .filters {
+    display: none;
+  }
+  .desktop-filters {
+    display: flex;
+    justify-content: space-between;
+    width: 70.5vw;
+    margin-top: -24px;
+  }
+  .desktop-filter-buttons {
+    display: flex;
+  }
+  .overlay-button {
+    border: solid 4px #141410;
+    color: #141410;
+    margin-right: 1rem;
+  }
+  .overlay-button-active {
+    background: #141410 !important;
+    color: #fff !important;
+  }
+  .sort-container {
+    margin: -24px 0 0 0;
+  }
+  .directory-subfooter {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 8vw;
+  }
+  .input-container {
+    width: 425px;
+  }
 }

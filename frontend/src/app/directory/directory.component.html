@@ -7,6 +7,22 @@
     <story-header [title]="'Interviews'"></story-header>
   </div>
 
+  <div class="desktop-filters">
+    <div class="desktop-filter-buttons">
+      <div *ngFor="let button of overlayButtons" class="overlay-button"
+        [ngClass]="{'overlay-button-active': button.selected }"
+        (click)="toggleFilterButton(button.title)">
+        {{button.title}}
+      </div>
+    </div>
+    <div class="sort-container">
+      <h5 class="sort">Sort</h5>
+      <select class="overlay-button" name="sort">
+        <option value="mostRecent">most recent</option>
+      </select>
+    </div>
+  </div>
+
   <div class="filters">
     <div class="filter-button" (click)="toggleFilters()">
       <img src="/assets/icons/Filter.svg" alt="arrow pointing right">
@@ -25,7 +41,6 @@
         <img src="/assets/icons/Arrow-fff.svg" alt="arrow pointing right">
       </div>
     </div>
-
   </div>
 
   <div class="footer-container">
