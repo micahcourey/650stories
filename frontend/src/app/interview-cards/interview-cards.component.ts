@@ -8,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InterviewCardsComponent implements OnInit {
   @Input() interviews: Array<any>;
   @Input() classes: string;
-  
+  @Input() limit: number;
+
   boxColors: Array<any>;
 
   constructor() {
@@ -18,13 +19,27 @@ export class InterviewCardsComponent implements OnInit {
   ngOnInit() {
     this.getColors();
     this.shortenDescription();
+    if (this.limit) {
+      this.interviews = this.limitInterviews(this.limit);
+    }
+    this.sortInterviewsByDate();
+    console.log(this.interviews);
+  }
+
+  sortInterviewsByDate() {
+    this.interviews.sort((a, b) => {
+      a = new Date(a.date);
+      b = new Date(b.date);
+      return a > b ? -1 : a < b ? 1 : 0;
+    });
+    console.log('sorted interviews', this.interviews);
   }
 
   shortenDescription() {
     this.interviews.forEach(interview => {
       let sentenceCount: number = 0;
-      let desc = interview.description;
-      for (var i = 0; i < desc.length; i++) {
+      const desc = interview.description;
+      for (let i = 0; i < desc.length; i++) {
         if (desc[i] === '.' || desc[i] === '?' || desc[i] === '!') {
           sentenceCount++;
           if (sentenceCount === 2) {
@@ -37,6 +52,10 @@ export class InterviewCardsComponent implements OnInit {
     });
   }
 
+  limitInterviews(limit: number) {
+    return this.interviews.slice(0, limit);
+  }
+
   getColors() {
     let i = 0;
     this.interviews.forEach(interview => {
@@ -46,7 +65,7 @@ export class InterviewCardsComponent implements OnInit {
         i = 0;
       }
     });
-    console.log('intervies => ', this.interviews)
+    console.log('intervies => ', this.interviews);
   }
 
 }

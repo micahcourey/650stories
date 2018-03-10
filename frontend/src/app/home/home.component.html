@@ -15,7 +15,7 @@
   </div>
 
   <div class="card-container" *ngIf="interviews.length > 0">
-    <interview-cards [interviews]="interviews"></interview-cards>
+    <interview-cards [limit]="3" [interviews]="interviews"></interview-cards>
   </div>
 
   <div class="sub-footer">

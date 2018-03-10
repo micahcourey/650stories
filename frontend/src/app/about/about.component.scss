@@ -49,6 +49,11 @@
   margin-bottom: 1rem;
   background: #ecece8;
 }
+// .member-image-container:before {
+//   content: "";
+// 	display: block;
+// 	padding-top: 100%
+// }
 .member-title {
   font-family: Georgia;
   font-size: 12px;
@@ -63,6 +68,7 @@
 .member-image {
   width: 100%;
   height: auto;
+
   object-fit: cover;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -100,6 +106,23 @@
 }
 .email > .link-bg {
   margin-top: -16px;
+}
+.logo-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #141410;
+  height: 360px;
+}
+.logo-image > .member-image {
+  width: 260px !important;
+  height: auto !important;
+  margin-bottom: 3rem;
+}
+.logo-image > .pacific-logo {
+  width: 148px;
+  height: auto;
 }
 
 @media (min-width: 800px) {
@@ -145,22 +168,7 @@
     width: 100%;
     margin: 5rem 12px 12px 12px;
   }
-  .logo-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #141410;
-  }
-  .logo-image > .member-image {
-    width: 260px;
-    height: auto;
-    margin-bottom: 3rem;
-  }
-  .logo-image > .pacific-logo {
-    width: 148px;
-    height: auto;
-  }
+  
   
   @media (max-width: 1166px) {
     .description-container, .team-container, .footer-container {

@@ -22,6 +22,7 @@ import { StoryButtonComponent } from './story-button/story-button.component';
 import { StoryFooterComponent } from './story-footer/story-footer.component';
 import { StoryHeaderComponent } from './shared/story-header/story-header.component';
 import { StoryNavComponent } from './shared/story-nav/story-nav.component';
+import { InterviewHeaderComponent } from './interview/interview-header/interview-header.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { StoryNavComponent } from './shared/story-nav/story-nav.component';
     StoryButtonComponent,
     StoryFooterComponent,
     StoryHeaderComponent,
-    StoryNavComponent
+    StoryNavComponent,
+    InterviewHeaderComponent
   ],
   imports: [
     BrowserModule,

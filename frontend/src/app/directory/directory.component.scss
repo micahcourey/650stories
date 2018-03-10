@@ -127,6 +127,19 @@ h5 {
 .sort-container {
   margin-top: 2rem;
 }
+.sort-container > select {
+  height: 48px;
+  width: 264px;
+  margin-right: 0;
+  background: transparent;
+  padding-right: 4px;
+  background-image: url("../../assets/icons/Select.svg");
+  background-repeat: no-repeat; 
+  background-position: 95% center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .filter {
   position: absolute;
   bottom: 43px;
@@ -171,13 +184,17 @@ h5 {
     color: #fff !important;
   }
   .sort-container {
-    margin: -24px 0 0 0;
+    margin: -23px 0 0 0;
   }
   .directory-subfooter {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 0 8vw;
+
+    width: 86vw;
+  }
+  .footer-container {
+    width: 70.5vw;
   }
   .input-container {
     width: 425px;
