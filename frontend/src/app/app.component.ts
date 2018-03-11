@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.interviews = this._apiService.getInterviews();
+    // this.interviews = this._apiService.getInterviews();
     this.selectionShare = highlightShare({
       selector: '#shareable',
       sharers: [twitterSharer, facebookSharer, emailSharer, linkedInSharer, copySharer]

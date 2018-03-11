@@ -25,6 +25,7 @@ import { StoryNavComponent } from './shared/story-nav/story-nav.component';
 import { InterviewHeaderComponent } from './interview/interview-header/interview-header.component';
 import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.component';
 import { QAndAComponent } from './interview/q-and-a/q-and-a.component';
+import { PullQuoteComponent } from './interview/pull-quote/pull-quote.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { QAndAComponent } from './interview/q-and-a/q-and-a.component';
     StoryNavComponent,
     InterviewHeaderComponent,
     ShareButtonsComponent,
-    QAndAComponent
+    QAndAComponent,
+    PullQuoteComponent
   ],
   imports: [
     BrowserModule,

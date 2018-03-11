@@ -14,7 +14,16 @@
       <div class="photo-strip-container" *ngIf="i === 2">
         <img class="photo-strip-image" src="{{interview.photo_strip_image_1}}" alt="A portrait photo of the interviewee">
       </div>
-      <div *ngIf="i === 4">First pull quote</div>
+      <div *ngIf="i === 8" class="big-image-container">
+        <img class="big-image" src="{{interview.big_image}}" alt="A portrait photo of the interviewee">
+      </div>
+      <div class="photo-strip-container" *ngIf="i === 2">
+        <img class="photo-strip-image" src="{{interview.pair_image_1}}" alt="A portrait photo of the interviewee">
+      </div>
+      <pull-quote *ngIf="i === 4" [color]="interview.color" [quoteText]="interview.pull_quote_1"></pull-quote>
+      <pull-quote *ngIf="i === 6" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
+      <pull-quote *ngIf="i === 11" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
+      <pull-quote *ngIf="i === 12" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
     </div>
   </div>
 

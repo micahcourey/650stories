@@ -6,7 +6,7 @@ h4 {
   color: #141410;
 }
 .interview-container {
-
+  background: linear-gradient(to right, #fafaf9 0%,#fafaf9 24.5%,#fafaf9 24.5%,white 24.5%,white 100%);
 }
 .interview-content-container {
   margin: 0 1.25rem;
@@ -28,4 +28,16 @@ h4 {
   width: 320px;
   height: 320px;
   transform: rotate(-360deg);
+}
+.big-image-container {
+  width: 336px;
+  height: 224px;
+  overflow: hidden;
+}
+.big-image {
+  width: 336px;
+  height: auto;
+  zoom: 115%;
+  margin: -40px 0 0 -50px;
+  // object-fit: cover;
 }
