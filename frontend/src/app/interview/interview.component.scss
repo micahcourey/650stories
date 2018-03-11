@@ -1,4 +1,31 @@
+h4 {
+  font-family: Georgia;
+  font-size: 24px;
+  line-height: 1.67;
+  text-align: left;
+  color: #141410;
+}
 .interview-container {
 
 }
+.interview-content-container {
+  margin: 0 1.25rem;
+}
+.description-container {
+  margin: 3rem 0;
+}
+.line {
+  width: 72px;
+  height: 8px;
+}
+.question-container {
+  margin-top: 1.5rem;
+}
+.photo-strip-container {
 
+}
+.photo-strip-image {
+  width: 320px;
+  height: 320px;
+  transform: rotate(-360deg);
+}

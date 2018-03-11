@@ -28,7 +28,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    this.interviews = this._apiService.getInterviews();
+    this._apiService.getInterviews().then((interviews: any) => {
+      console.log('interviews', interviews)
+      this.interviews = interviews;
+    });
     this.selectionShare = highlightShare({
       selector: '#shareable',
       sharers: [twitterSharer, facebookSharer, emailSharer, linkedInSharer, copySharer]

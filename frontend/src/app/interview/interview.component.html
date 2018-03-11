@@ -1,7 +1,21 @@
-<div class="navbar-container">
+<div *ngIf="showNav" class="navbar-container">
   <story-nav></story-nav>
 </div>
 
-<div class="interview-container">
-  <interview-header></interview-header>
+<div *ngIf="interview" class="interview-container">
+  <interview-header [interview]="interview"></interview-header>
+  <div class="interview-content-container">
+    <div class="description-container">
+      <h4>{{interview?.description}}</h4>
+    </div>
+    <div class="line" [style.background]="interview.color"></div>
+    <div *ngFor="let question of questions; let i = index;" class="question-container">
+      <q-and-a [qa]="question"></q-and-a>
+      <div class="photo-strip-container" *ngIf="i === 2">
+        <img class="photo-strip-image" src="{{interview.photo_strip_image_1}}" alt="A portrait photo of the interviewee">
+      </div>
+      <div *ngIf="i === 4">First pull quote</div>
+    </div>
+  </div>
+
 </div>

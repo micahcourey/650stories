@@ -14,13 +14,13 @@
     </div>
   </div>
 
-  <div class="card-container" *ngIf="interviews.length > 0">
+  <div class="card-container" *ngIf="interviews?.length > 0">
     <interview-cards [limit]="3" [interviews]="interviews"></interview-cards>
   </div>
 
   <div class="sub-footer">
     <div class="sub-content">
-      <h4 class="interview-count">{{interviews.length}} interviews and counting</h4>
+      <h4 class="interview-count">{{interviews?.length}} interviews and counting</h4>
       <story-button routerLink="/directory">VIEW ALL <span class="desktop-text">INTERVIEWS</span></story-button>
     </div>
   </div>

@@ -23,6 +23,8 @@ import { StoryFooterComponent } from './story-footer/story-footer.component';
 import { StoryHeaderComponent } from './shared/story-header/story-header.component';
 import { StoryNavComponent } from './shared/story-nav/story-nav.component';
 import { InterviewHeaderComponent } from './interview/interview-header/interview-header.component';
+import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.component';
+import { QAndAComponent } from './interview/q-and-a/q-and-a.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { InterviewHeaderComponent } from './interview/interview-header/interview
     StoryFooterComponent,
     StoryHeaderComponent,
     StoryNavComponent,
-    InterviewHeaderComponent
+    InterviewHeaderComponent,
+    ShareButtonsComponent,
+    QAndAComponent
   ],
   imports: [
     BrowserModule,

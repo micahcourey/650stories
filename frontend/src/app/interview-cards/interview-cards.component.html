@@ -13,7 +13,7 @@
       <p class="interview-description" id="shareable">{{interview.short_description}}</p>
     </div>
     <div class="interview-button">
-      <story-button routerLink="/interview/{{interview.id}}">
+      <story-button [routerLink]="['/interview', interview.id]">
         READ THE INTERVIEW
       </story-button>
     </div>

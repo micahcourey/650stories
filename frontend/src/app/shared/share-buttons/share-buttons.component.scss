@@ -1,0 +1,19 @@
+.follow-button {
+  display: flex;
+  border: solid 4px #141410;
+  width: 172px;
+}
+.fb, .twitter, .pinterest, .email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.twitter, .fb, .pinterest {
+  width: 40px;
+  height: 40px;
+  border-right: solid 4px #141410;
+}
+.email {
+  width: 40px;
+  height: 40px;
+}

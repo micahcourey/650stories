@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'interview-header',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./interview-header.component.scss']
 })
 export class InterviewHeaderComponent implements OnInit {
+  @Input() interview;
 
   constructor() { }
 

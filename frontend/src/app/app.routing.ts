@@ -10,7 +10,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'interview', component: InterviewComponent },
-  { path: 'interview/:interview_id', component: InterviewComponent },
+  { path: 'interview/:id', component: InterviewComponent },
   { path: 'directory', component: DirectoryComponent },
 ];
 
