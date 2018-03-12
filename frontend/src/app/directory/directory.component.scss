@@ -146,9 +146,32 @@ h5 {
   align-self: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .desktop-filters {
     display: none;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .desktop-filters {
+    width: 74vw !important;
+    margin-bottom: -5rem;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .desktop-filters {
+    width: 86vw !important;
+    margin-bottom: -5rem;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+  .desktop-filters {
+    width: 90vw !important;
+    margin-bottom: -5rem;
+  }
+  .sort-container > select {
+    width: 180px;
   }
 }
 

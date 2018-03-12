@@ -1,5 +1,5 @@
 <div *ngIf="showNav" class="navbar-container">
-  <story-nav></story-nav>
+  <story-nav (leavingPage)="showNav = false;"></story-nav>
 </div>
 <div class="home-container">
 

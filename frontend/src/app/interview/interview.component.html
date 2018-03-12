@@ -11,20 +11,46 @@
     <div class="line" [style.background]="interview.color"></div>
     <div *ngFor="let question of questions; let i = index;" class="question-container">
       <q-and-a [qa]="question"></q-and-a>
-      <div class="photo-strip-container" *ngIf="i === 2">
-        <img class="photo-strip-image" src="{{interview.photo_strip_image_1}}" alt="A portrait photo of the interviewee">
+      <div *ngIf="i === 2" class="image-container">
+        <div class="photo-strip-container">
+          <img class="photo-strip-image" src="{{interview.photo_strip_image_1}}" alt="A portrait photo of the interviewee">
+        </div>
+        <div class="image-description">
+          <p>{{interview.big_image_description}}</p>
+        </div>
       </div>
-      <div *ngIf="i === 8" class="big-image-container">
-        <img class="big-image" src="{{interview.big_image}}" alt="A portrait photo of the interviewee">
+      <div *ngIf="i === 8" class="image-container">
+        <div class="big-image-container">
+          <img class="big-image" src="{{interview.big_image}}" alt="A portrait photo of the interviewee">
+        </div>
+        <div class="image-description">
+          <p>{{interview.big_image_description}}</p>
+        </div>
       </div>
-      <div class="photo-strip-container" *ngIf="i === 2">
-        <img class="photo-strip-image" src="{{interview.pair_image_1}}" alt="A portrait photo of the interviewee">
+      <div *ngIf="i === 12" class="image-container">
+        <div class="image-pair-container">
+          <img class="image-pair" src="{{interview.pair_image_1}}" alt="A portrait photo of the interviewee">
+        </div>
+        <div class="image-description">
+          <p>{{interview.pair_image_description}}</p>
+        </div>
       </div>
+
       <pull-quote *ngIf="i === 4" [color]="interview.color" [quoteText]="interview.pull_quote_1"></pull-quote>
       <pull-quote *ngIf="i === 6" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
       <pull-quote *ngIf="i === 11" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
       <pull-quote *ngIf="i === 12" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
     </div>
+    <div [style.background]="nextInterview?.color" class="next-interview-footer">
+      <h6>Next Interview</h6>
+      <h1>{{nextInterview?.interviewee_first_name}}</h1>
+      <h1>{{nextInterview?.interviewee_last_name}}</h1>
+    </div>
   </div>
 
+</div>
+
+<div class="construction-container">
+  <h2>Desktop page is under construction</h2>
+  <h4>Resize browser width to less than 600px to view mobile</h4>
 </div>

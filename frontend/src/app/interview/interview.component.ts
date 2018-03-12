@@ -16,25 +16,28 @@ import { ApiService } from '../services/api.service';
 })
 export class InterviewComponent implements OnInit {
   title = 'app';
-  interviews: Array<any>;
+  nextInterview: any;
   selectionShare: any;
   showNav: boolean = false;
   interview: any;
   questions: any;
+  scrollIndex = 0;
 
   constructor(private _apiService: ApiService, private route: ActivatedRoute, ) {
     console.log('interview constructor')
-    this.interviews = [];
     this.questions = [];
     this.interview = {};
-    this._apiService.getInterview(this.route.snapshot.params['id']).then((interview: any) => {
-      this.interview = interview;
+    this._apiService.getInterview(this.route.snapshot.params['slug']).then((interviews: any) => {
+      this.interview = interviews[0];
+      if (interviews.length > 1) {
+        this.nextInterview = interviews[1];
+      }
       this.questions = this.interview.questions.sort((a, b) => {
         return a.question_number - b.question_number;
       });
 
-      console.log('questions', this.questions)
-      console.log('got it!', interview);
+      console.log('questions', this.questions);
+      console.log('got it!', interviews);
     });
   }
 
@@ -51,9 +54,10 @@ export class InterviewComponent implements OnInit {
 
 
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
-    if (!this.showNav) {
+    if (!this.showNav && this.scrollIndex > 0) {
       this.showNav = true;
     }
+    this.scrollIndex++;
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -16,11 +16,12 @@ import { ApiService } from '../services/api.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   title = 'app';
   interviews: Array<any>;
   selectionShare: any;
   showNav: boolean = false;
+  scrollIndex = 0;
 
   constructor(private http: HttpClient, private _apiService: ApiService) {
     this.interviews = [];
@@ -39,10 +40,15 @@ export class HomeComponent implements OnInit {
     this.selectionShare.init();
   }
   
+  ngOnDestroy() {
+    this.showNav = false;
+  }
+
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
-    if (!this.showNav) {
+    if (!this.showNav && this.scrollIndex > 0) {
       this.showNav = true;
     }
+    this.scrollIndex++;
   }
 
 }

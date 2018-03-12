@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -16,13 +16,14 @@ import { ApiService } from '../services/api.service';
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.scss']
 })
-export class DirectoryComponent implements OnInit {
-  showNav = true;
+export class DirectoryComponent implements OnInit, OnDestroy {
+  showNav = false;
   showFilters = false;
   interviews: Array<any>;
   selectionShare: any;
   userEmail: string;
   overlayButtons: Array<any>;
+  scrollIndex = 0;
 
   constructor(private http: HttpClient, private _apiService: ApiService) {
     this.interviews = [];
@@ -47,10 +48,15 @@ export class DirectoryComponent implements OnInit {
     this.selectionShare.init();
   }
 
+  ngOnDestroy() {
+    this.showNav = false;
+  }
+
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
-    if (!this.showNav) {
+    if (!this.showNav && this.scrollIndex > 0) {
       this.showNav = true;
     }
+    this.scrollIndex++;
   }
 
   submitEmail() {

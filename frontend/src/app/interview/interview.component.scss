@@ -41,3 +41,71 @@ h4 {
   margin: -40px 0 0 -50px;
   // object-fit: cover;
 }
+.image-pair-container {
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+}
+.image-pair {
+  width: 320px;
+  height: auto;
+  margin-top: -80px;
+}
+.image-description {
+  background: #fff;
+}
+.image-description > p {
+  padding: 1rem;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Georgia;
+  font-style: italic;
+  color: #888884;
+}
+.next-interview-footer {
+  height: 140px;
+  padding: 1rem 1rem 0 1rem;
+}
+.next-interview-footer > h6 {
+  font-family: Metric-Semibold;
+  font-size: 8px;
+  line-height: 16px;
+  letter-spacing: 2.8px;
+  color: #141410;
+  opacity: 0.4;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-family: DomaineDisplay-ExtraboldItalic;
+  font-size: 48px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (min-width: 600px) {
+  .interview-container {
+    display: none;
+  }
+  .construction-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 601px) {
+  .construction-container {
+    display: none;
+  }
+}

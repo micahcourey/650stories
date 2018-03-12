@@ -19,7 +19,7 @@
 .about-header {
   opacity: 0.4;
   font-family: Metric-Semibold;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -132,18 +132,26 @@
     align-items: center;
     background: linear-gradient(to right, #fafaf9 0%,#fafaf9 20.75%,#fafaf9 20.75%,white 20.75%,white 100%);
   }
+  .description-container, .footer-container {
+    margin-top: 128px;
+  }
   .description-container > .about-h4 {
     margin-left: 12px;
     margin-right: 12px;
+  }
+  .team-container, .about-subfooter {
+    margin-top: 96px;
   }
   .description-container, .team-container, .footer-container {
     max-width: 1152px;
   }
   .about-header {
     margin-left: 12px;
+    margin-bottom: 1.5rem;
   }
-  .team-container {
-    margin: 3rem 0 0 0;
+  .interviews-header {
+    margin-left: 0 !important;
+    margin-bottom: 1rem !important;
   }
   .team {
     display: flex;
@@ -166,7 +174,7 @@
   }
   .footer-container {
     width: 100%;
-    margin: 5rem 12px 12px 12px;
+    margin: 128px 12px 12px 12px;
   }
   
   

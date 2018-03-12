@@ -52,17 +52,25 @@ export class ApiService {
     });
   }
 
-  getInterview(interviewId) {
+  getInterview(interviewSlug) {
     return new Promise((resolve, reject) => {
       // if (!this.interviews.length) {
         this.getInterviews().then((interviews: any) => {
           this.interviews = interviews;
-          const requestedInterview = this.interviews.find(interview => interview.id === interviewId);
+          this.interviews.sort((a, b) => {
+            a = new Date(a.date);
+            b = new Date(b.date);
+            return a > b ? -1 : a < b ? 1 : 0;
+          });
+          const requestedInterview = this.interviews.find(interview => interview.slug === interviewSlug);
+          const i = this.interviews.indexOf(requestedInterview);
+          const nextInterview = this.interviews[i + 1];
           console.log(requestedInterview);
-          return resolve(requestedInterview);
+          console.log('index of interview', i)
+          return resolve([requestedInterview, nextInterview]);
         });
       // } else {
-      //   return this.interviews.find(interview => +interview.id === +interviewId);
+      //   return this.interviews.find(interview => +interview.id === +interviewSlug);
       // }
     });
   }

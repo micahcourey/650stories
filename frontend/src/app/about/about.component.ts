@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 
 interface TeamMember {
   name: string;
@@ -14,23 +14,32 @@ interface TeamMember {
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, OnDestroy {
 
   teamMembers: Array<TeamMember>;
   showNav = false;
+  scrollIndex: number;
 
   constructor() {
     this.teamMembers = this.getTeamMembers();
-  }
-
-  ngOnInit() {
+    this.scrollIndex = 0;
     window.scrollTo(0, 0);
   }
 
+  ngOnInit() {
+   
+  }
+
+  ngOnDestroy() {
+    this.showNav = false;
+  }
+
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
-    if (!this.showNav) {
-      this.showNav = true;
-    }
+      console.log(event)
+      if (!this.showNav && this.scrollIndex > 0) {
+        this.showNav = true;
+      }
+      this.scrollIndex++;
   }
 
   getTeamMembers() {

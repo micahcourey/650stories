@@ -22,7 +22,12 @@
   text-align: left;
   color: #141410;
 }
-
+img {
+  cursor: pointer;
+}
+img:focus {
+  outline: 0;
+}
 .svg-icon {
   background-repeat: no-repeat;
   // background-image: url(../../../assets/icons/icons.svg);

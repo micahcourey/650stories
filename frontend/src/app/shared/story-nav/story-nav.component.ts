@@ -1,12 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'story-nav',
   templateUrl: './story-nav.component.html',
   styleUrls: ['./story-nav.component.scss']
 })
-export class StoryNavComponent implements OnInit {
+export class StoryNavComponent implements OnInit, OnDestroy {
   @Input() selectedTab: string;
+  @Output() leavingPage = new EventEmitter();
 
   constructor() {
     this.selectedTab = 'home';
@@ -14,6 +15,11 @@ export class StoryNavComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  ngOnDestroy() {
+    this.leavingPage.emit();
+    console.log('leaving');
   }
 
 }
