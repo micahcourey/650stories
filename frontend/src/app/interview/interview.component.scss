@@ -22,12 +22,19 @@ h4 {
   margin-top: 1.5rem;
 }
 .photo-strip-container {
-
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-right: -1.25rem;
+}
+.photo-strip-container::-webkit-scrollbar {
+  display: none;
 }
 .photo-strip-image {
   width: 320px;
   height: 320px;
   transform: rotate(-360deg);
+  margin-right: 1rem;
 }
 .big-image-container {
   width: 336px;
@@ -87,25 +94,33 @@ h1 {
   color: #ffffff;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .interview-container {
-    display: none;
+    background: linear-gradient(to right, #fafaf9 0%,#fafaf9 19.75%,#fafaf9 19.75%,white 19.75%,white 100%);
   }
-  .construction-container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .interview-content-container {
+    margin: 144px 26.75% 80px 14.75rem;
   }
-  h2 {
-    font-size: 2rem;
+  .question-container {
+    margin-left: 192px;
+    margin-top: -12px;
+  }
+  .image-container {
+    margin-right: -26.5vw;
+  }
+  .photo-strip-container {
+    margin-left: -192px;
+    margin-right: 0;
+  }
+  .photo-strip-image {
+    width: 360px;
+    height: 360px;
+    margin-right: 1.5rem;
   }
 }
 
-@media (max-width: 601px) {
-  .construction-container {
-    display: none;
-  }
+@media (max-width: 701px) {
+
 }
+
+
