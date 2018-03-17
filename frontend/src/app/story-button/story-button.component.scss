@@ -17,6 +17,12 @@
   color: #141410;
   cursor: pointer;
 }
+.story-button:hover {
+  opacity: 0.8;
+  background-color: #141410;
+  transition: 0.4s;
+  color: #fff;
+}
 .button-text {
   margin-top: 2px;
 }

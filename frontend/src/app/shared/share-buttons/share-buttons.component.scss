@@ -8,6 +8,12 @@
   justify-content: center;
   align-items: center;
 }
+.fb:hover, .twitter:hover, .pinterest:hover, .email:hover {
+  opacity: 0.8;
+  background-color: #141410;
+  transition: 0.4s;
+  color: #fff;
+}
 .twitter, .fb, .pinterest {
   width: 40px;
   height: 40px;

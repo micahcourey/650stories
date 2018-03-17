@@ -65,7 +65,7 @@ export class InterviewCardsComponent implements OnInit {
         i = 0;
       }
     });
-    console.log('intervies => ', this.interviews);
+    console.log('interviews => ', this.interviews);
   }
 
 }

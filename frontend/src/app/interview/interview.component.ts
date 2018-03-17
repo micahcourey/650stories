@@ -22,15 +22,24 @@ export class InterviewComponent implements OnInit {
   interview: any;
   questions: any;
   scrollIndex = 0;
+  nextInterviewSlug: string;
 
   constructor(private _apiService: ApiService, private route: ActivatedRoute, ) {
-    console.log('interview constructor')
+    this.nextInterviewSlug = '';
     this.questions = [];
     this.interview = {};
     this._apiService.getInterview(this.route.snapshot.params['slug']).then((interviews: any) => {
       this.interview = interviews[0];
       if (interviews.length > 1) {
         this.nextInterview = interviews[1];
+        console.log(this.nextInterview);
+        if (this.nextInterview.slug) {
+          console.log('Next interview slug ', this.nextInterview.slug)
+          this.nextInterviewSlug = this.nextInterview.slug;
+        } else {
+          console.log('Next interview id ', this.nextInterview._id)
+          this.nextInterviewSlug = this.nextInterview._id;
+        }
       }
       this.questions = this.interview.questions.sort((a, b) => {
         return a.question_number - b.question_number;
@@ -43,7 +52,7 @@ export class InterviewComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.route.snapshot.params['id']);
-    console.log(this.questions)
+    console.log(this.questions);
     window.scrollTo(0, 0);
     this.selectionShare = highlightShare({
       selector: '#shareable',
