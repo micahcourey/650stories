@@ -27,6 +27,7 @@ import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.comp
 import { QAndAComponent } from './interview/q-and-a/q-and-a.component';
 import { PullQuoteComponent } from './interview/pull-quote/pull-quote.component';
 import { ShareButtonsVerticalComponent } from './shared/share-buttons-vertical/share-buttons-vertical.component';
+import { InterviewFooterComponent } from './interview/interview-footer/interview-footer.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ShareButtonsVerticalComponent } from './shared/share-buttons-vertical/s
     ShareButtonsComponent,
     QAndAComponent,
     PullQuoteComponent,
-    ShareButtonsVerticalComponent
+    ShareButtonsVerticalComponent,
+    InterviewFooterComponent
   ],
   imports: [
     BrowserModule,

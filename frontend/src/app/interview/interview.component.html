@@ -68,35 +68,22 @@
       <!-- END PAIR IMAGE -->
 
       <!-- PULL QUOTES -->
-      <pull-quote *ngIf="i === 4" [color]="interview.color" [quoteText]="interview.pull_quote_1"></pull-quote>
-      <pull-quote *ngIf="i === 6" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
-      <pull-quote *ngIf="i === 11" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
-      <pull-quote *ngIf="i === 12" [color]="interview.color" [quoteText]="interview.pull_quote_2"></pull-quote>
+      <pull-quote *ngIf="i === 4" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_1"></pull-quote>
+      <pull-quote *ngIf="i === 6" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_2"></pull-quote>
+      <pull-quote *ngIf="i === 11" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_2"></pull-quote>
+      <pull-quote *ngIf="i === 12" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_2"></pull-quote>
       <!-- END PULL QUOTES -->
 
     </div>
 
     <!-- MOBILE FOOTER -->
-    <div [style.background]="nextInterview?.color" class="next-interview-footer-mobile">
-      <h6>Next Interview</h6>
-      <h1>{{nextInterview?.interviewee_first_name}}</h1>
-      <h1>{{nextInterview?.interviewee_last_name}}</h1>
-    </div>
+    <interview-footer [isMobile]="true" [nextInterview]="nextInterview" [nextInterviewSlug]="nextInterviewSlug"></interview-footer>
     <!-- END MOBILE FOOTER -->
 
   </div>
 
-  <!-- DESKTOP FOOTER -->
-  <div *ngIf="nextInterview != undefined" class="footer-background" [routerLink]="['/interview', nextInterviewSlug]">
-    <div [style.background]="nextInterview?.color" class="next-interview-footer-desktop">
-      <div class="footer-title">
-        <h6>Next Interview</h6>
-        <h1>{{nextInterview?.interviewee_first_name}}</h1>
-        <h1>{{nextInterview?.interviewee_last_name}}</h1>
-      </div>
-      <img class="title-image image-mobile" src="{{nextInterview?.title_image}}" alt="A portrait photo of the interviewee">
-    </div>
-  </div>
-  <!-- END DESKTOP FOOTER -->
-
 </div>
+
+<!-- DESKTOP FOOTER -->
+<interview-footer [isMobile]="false" [nextInterview]="nextInterview" [nextInterviewSlug]="nextInterviewSlug"></interview-footer>
+<!-- END DESKTOP FOOTER -->

@@ -1,0 +1,19 @@
+<div *ngIf="!isMobile && nextInterview != undefined" class="footer-background" [routerLink]="['/interview', nextInterviewSlug]">
+  <div [style.background]="nextInterview?.color" class="next-interview-footer-desktop">
+    <div class="footer-title">
+      <h6>Next Interview</h6>
+      <h1>{{nextInterview?.interviewee_first_name}}</h1>
+      <h1>{{nextInterview?.interviewee_last_name}}</h1>
+    </div>
+    <div class="title-image-container">
+      <img class="title-image image-mobile" src="{{nextInterview?.title_image}}" alt="A portrait photo of the interviewee">
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="isMobile && nextInterview != undefined" [style.background]="nextInterview?.color" class="next-interview-footer-mobile">
+  <h6>Next Interview</h6>
+  <h1>{{nextInterview?.interviewee_first_name}}</h1>
+  <h1>{{nextInterview?.interviewee_last_name}}</h1>
+</div>
