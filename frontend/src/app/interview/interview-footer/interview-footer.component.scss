@@ -84,6 +84,30 @@ h1 {
   }
 }
 
+@media (min-width: 701px) and (max-width: 1400px) {
+  .footer-background {
+    height: 288px;
+  }
+  .title-image-container {
+    width: 450px;
+    height: 319px;
+    overflow: hidden;
+  }
+  .title-image {
+    width: 450px;
+    height: auto;
+  }
+  .footer-title {
+    margin-right: -128px;
+  }
+  .footer-title > h1 {
+    font-size: 100px;
+  }
+  .next-interview-footer-desktop {
+    padding: 0 8px;
+  }
+}
+
 @media (max-width: 701px) {
   .next-interview-footer-desktop {
     display: none;

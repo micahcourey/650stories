@@ -12,7 +12,7 @@
 </div>
 
 
-<div *ngIf="isMobile && nextInterview != undefined" [style.background]="nextInterview?.color" class="next-interview-footer-mobile">
+<div *ngIf="isMobile && nextInterview != undefined" [style.background]="nextInterview?.color" class="next-interview-footer-mobile" (click)="showNext()">
   <h6>Next Interview</h6>
   <h1>{{nextInterview?.interviewee_first_name}}</h1>
   <h1>{{nextInterview?.interviewee_last_name}}</h1>

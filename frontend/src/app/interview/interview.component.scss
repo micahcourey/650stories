@@ -105,6 +105,26 @@ h1 {
   text-align: left;
   color: #ffffff;
 }
+.no-questions-container {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.no-q-link {
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: DomaineDisplay-ExtraboldItalic;
+  font-weight: 800;
+  font-style: italic;
+  color: #141410;
+}
+.no-q-link:hover {
+  color: #888884;
+  transition: 0.4s;
+}
+
 
 @media (min-width: 700px) {
   .interview-container {
@@ -179,6 +199,48 @@ h1 {
     display: none;
   }
 
+}
+
+@media (min-width: 701px) and (max-width: 1250px) {
+  .question-container {
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+  .image-container {
+    margin-right: -10vw;
+  }
+  .big-image-container {
+    width: 800px;
+    height: 528px;
+    overflow: hidden;
+    margin-left: -216px;
+  }
+  .big-image {
+    width: 800px;
+    height: auto;
+    zoom: 116%;
+    margin: -100px 0 0 0;
+    // object-fit: cover;
+  }
+}
+
+@media (min-width: 1251px) and (max-width: 1500px) {
+  .interview-container {
+    overflow-x: hidden !important;
+  }
+  .big-image-container {
+    width: 950px;
+    height: 627px;
+    overflow: hidden;
+    margin-left: -216px;
+  }
+  .big-image {
+    width: 950px;
+    height: auto;
+    zoom: 116%;
+    margin: -100px 0 0 0;
+    // object-fit: cover;
+  }
 }
 
 @media (max-width: 701px) {

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, HostListener, OnChanges } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as highlightShare from 'highlight-share';
 import * as twitterSharer from 'highlight-share/dist/sharers/twitter';
 import * as facebookSharer from 'highlight-share/dist/sharers/facebook';
@@ -18,14 +18,16 @@ export class InterviewComponent implements OnInit, OnChanges {
   title = 'app';
   nextInterview: any;
   selectionShare: any;
-  showNav: boolean = false;
-  loading: boolean = false;
+  showNav = false;
+  loading = false;
+  noQuestions = false;
+  lastInterview = false;
   interview: any;
   questions: any;
   scrollIndex = 0;
   nextInterviewSlug: string;
 
-  constructor(private _apiService: ApiService, private route: ActivatedRoute) {
+  constructor(private _apiService: ApiService, private route: ActivatedRoute, private router: Router) {
     this.nextInterviewSlug = '';
     this.questions = [];
     this.interview = {};
@@ -53,8 +55,9 @@ export class InterviewComponent implements OnInit, OnChanges {
     this.interview = {};
     setTimeout(() => {
       this._apiService.getInterview(this.route.snapshot.params['slug']).then((interviews: any) => {
+        console.log('interview component interviews ', interviews);
         this.interview = interviews[0];
-        if (interviews.length > 1) {
+        if (interviews[1] !== undefined) {
           this.nextInterview = interviews[1];
           console.log(this.nextInterview);
           if (this.nextInterview.slug) {
@@ -62,15 +65,28 @@ export class InterviewComponent implements OnInit, OnChanges {
           } else {
             this.nextInterviewSlug = this.nextInterview._id;
           }
+        } else {
+          this.lastInterview = true;
         }
         this.questions = this.interview.questions.sort((a, b) => {
           return a.question_number - b.question_number;
         });
+        if (!this.questions.length) {
+          this.noQuestions = true;
+        }
         window.scrollTo(0, 0);
         this.loading = false;
       });
-    }, 1)
+    }, 1);
 
+  }
+
+  showNext() {
+    this.router.navigate(['/interview', 'bego_lozano']).then((nav) => {
+      this.getInterview();
+    }, (err) => {
+      console.log(err);
+    });
   }
 
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {

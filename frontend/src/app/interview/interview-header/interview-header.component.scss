@@ -117,6 +117,47 @@ h6 {
   }
 
 }
+
+@media (min-width: 951px) and (max-width: 1250px) {
+  .background-container {
+    height: 602px;
+  }
+  h1 {
+    font-size: 120px;
+    line-height: 1;
+  }
+  .title-container {
+    margin-right: -2rem;
+  }
+  .title-image, .image-container {
+    height: 500px;
+    width: 500px;
+  }
+  .share-container {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 950px) {
+  .background-container {
+    height: 502px;
+  }
+  h1 {
+    font-size: 100px;
+    line-height: 1;
+  }
+  .title-container {
+    margin-right: -5rem;
+  }
+  .title-image, .image-container {
+    height: 400px;
+    width: 400px;
+  }
+  .share-container {
+    margin-top: 2.5rem;
+  }
+}
+
 @media (max-width: 701px) {
   .image-desktop {
     display: none !important;

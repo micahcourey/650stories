@@ -9,6 +9,8 @@ export class StoryNavComponent implements OnInit, OnDestroy {
   @Input() selectedTab: string;
   @Output() leavingPage = new EventEmitter();
 
+  showMobileMenu = false;
+
   constructor() {
     this.selectedTab = 'home';
   }
@@ -20,6 +22,14 @@ export class StoryNavComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.leavingPage.emit();
     console.log('leaving');
+  }
+
+  toggleNav() {
+    if (this.showMobileMenu === false) {
+      this.showMobileMenu = true;
+    } else {
+      this.showMobileMenu = false;
+    }
   }
 
 }

@@ -75,7 +75,10 @@
       <!-- END PULL QUOTES -->
 
     </div>
-
+    <div *ngIf="noQuestions" class="no-questions-container">
+      <h4>This interview is in development</h4>
+      <h4>Check out the interview with <a (click)="showNext()" class="no-q-link">Bego Lozano</a></h4>
+    </div>
     <!-- MOBILE FOOTER -->
     <interview-footer [isMobile]="true" [nextInterview]="nextInterview" [nextInterviewSlug]="nextInterviewSlug"></interview-footer>
     <!-- END MOBILE FOOTER -->
