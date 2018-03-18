@@ -20,9 +20,15 @@ h4 {
     display: none;
   }
   .desktop-share {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
     margin-left: -24px;
-    margin-right: 48px;
   }
+  .desktop-share > h4 {
+    margin-left: 48px;
+    margin-top: -8px;
+  } 
   .quote-container {
     margin: 1rem -192px 2.5rem -192px;
     max-width: 1008px;

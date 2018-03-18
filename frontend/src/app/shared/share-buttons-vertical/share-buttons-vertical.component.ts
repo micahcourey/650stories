@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'share-buttons-vertical',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./share-buttons-vertical.component.scss']
 })
 export class ShareButtonsVerticalComponent implements OnInit {
+  @Input() shareText: string;
 
   constructor() { }
 
   ngOnInit() {
+    console.log('shareText ', this.shareText)
+    this.shareText = `"${this.shareText}"`;
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, HostListener, OnChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as highlightShare from 'highlight-share';
 import * as twitterSharer from 'highlight-share/dist/sharers/twitter';
@@ -14,40 +14,22 @@ import { ApiService } from '../services/api.service';
   templateUrl: './interview.component.html',
   styleUrls: ['./interview.component.scss']
 })
-export class InterviewComponent implements OnInit {
+export class InterviewComponent implements OnInit, OnChanges {
   title = 'app';
   nextInterview: any;
   selectionShare: any;
   showNav: boolean = false;
+  loading: boolean = false;
   interview: any;
   questions: any;
   scrollIndex = 0;
   nextInterviewSlug: string;
 
-  constructor(private _apiService: ApiService, private route: ActivatedRoute, ) {
+  constructor(private _apiService: ApiService, private route: ActivatedRoute) {
     this.nextInterviewSlug = '';
     this.questions = [];
     this.interview = {};
-    this._apiService.getInterview(this.route.snapshot.params['slug']).then((interviews: any) => {
-      this.interview = interviews[0];
-      if (interviews.length > 1) {
-        this.nextInterview = interviews[1];
-        console.log(this.nextInterview);
-        if (this.nextInterview.slug) {
-          console.log('Next interview slug ', this.nextInterview.slug)
-          this.nextInterviewSlug = this.nextInterview.slug;
-        } else {
-          console.log('Next interview id ', this.nextInterview._id)
-          this.nextInterviewSlug = this.nextInterview._id;
-        }
-      }
-      this.questions = this.interview.questions.sort((a, b) => {
-        return a.question_number - b.question_number;
-      });
-
-      console.log('questions', this.questions);
-      console.log('got it!', interviews);
-    });
+    this.getInterview();
   }
 
   ngOnInit() {
@@ -61,6 +43,35 @@ export class InterviewComponent implements OnInit {
     this.selectionShare.init();
   }
 
+  ngOnChanges() {
+    console.log('onChanges Fired')
+
+  }
+
+  getInterview() {
+    this.loading = true;
+    this.interview = {};
+    setTimeout(() => {
+      this._apiService.getInterview(this.route.snapshot.params['slug']).then((interviews: any) => {
+        this.interview = interviews[0];
+        if (interviews.length > 1) {
+          this.nextInterview = interviews[1];
+          console.log(this.nextInterview);
+          if (this.nextInterview.slug) {
+            this.nextInterviewSlug = this.nextInterview.slug;
+          } else {
+            this.nextInterviewSlug = this.nextInterview._id;
+          }
+        }
+        this.questions = this.interview.questions.sort((a, b) => {
+          return a.question_number - b.question_number;
+        });
+        window.scrollTo(0, 0);
+        this.loading = false;
+      });
+    }, 1)
+
+  }
 
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
     if (!this.showNav && this.scrollIndex > 0) {

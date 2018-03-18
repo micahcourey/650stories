@@ -1,4 +1,4 @@
-<div *ngIf="!isMobile && nextInterview != undefined" class="footer-background" [routerLink]="['/interview', nextInterviewSlug]">
+<div *ngIf="!isMobile && nextInterview != undefined" class="footer-background" (click)="showNext()">
   <div [style.background]="nextInterview?.color" class="next-interview-footer-desktop">
     <div class="footer-title">
       <h6>Next Interview</h6>

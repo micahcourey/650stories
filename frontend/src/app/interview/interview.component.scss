@@ -119,15 +119,20 @@ h1 {
   }
   .image-container {
     margin-right: -26.5vw;
+    margin-bottom: 72px;
+    margin-bottom: 72px;
   }
   .photo-strip-container {
     margin-left: -192px;
-    margin-right: 0;
+    margin-right: 0px;
+    overflow: scroll;
   }
   .photo-strip-image {
-    width: 360px;
+    width: 360px !important;
     height: 360px;
+    min-width: 360px;
     margin-right: 1.5rem;
+    // object-fit: contain;
   }
   .big-image-container {
     width: 1128px;

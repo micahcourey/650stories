@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { ShareModule } from '@ngx-share/core';
 
 // ROUTING
 import { routing } from './app.routing';
@@ -54,6 +55,7 @@ import { InterviewFooterComponent } from './interview/interview-footer/interview
     HttpClientModule,
     routing,
     FormsModule,
+    ShareModule.forRoot(),
   ],
   providers: [
     AppComponent,

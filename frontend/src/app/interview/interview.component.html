@@ -2,7 +2,7 @@
   <story-nav></story-nav>
 </div>
 
-<div *ngIf="interview" class="interview-container">
+<div *ngIf="interview && !loading" class="interview-container animated" [ngClass]="{'fadeIn': loading === false}">
 
   <!-- INTERVIEW HEADER -->
   <interview-header [interview]="interview"></interview-header>
@@ -85,5 +85,5 @@
 </div>
 
 <!-- DESKTOP FOOTER -->
-<interview-footer [isMobile]="false" [nextInterview]="nextInterview" [nextInterviewSlug]="nextInterviewSlug"></interview-footer>
+<interview-footer [isMobile]="false" [nextInterview]="nextInterview" [nextInterviewSlug]="nextInterviewSlug" (interviewChanged)="getInterview()"></interview-footer>
 <!-- END DESKTOP FOOTER -->
