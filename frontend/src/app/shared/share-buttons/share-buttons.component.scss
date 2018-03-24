@@ -7,12 +7,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .fb:hover, .twitter:hover, .pinterest:hover, .email:hover {
   opacity: 0.8;
   background-color: #141410;
   transition: 0.4s;
-  color: #fff;
+  fill: #fff;
 }
 .twitter, .fb, .pinterest {
   width: 40px;
@@ -23,4 +24,9 @@
   width: 40px;
   height: 40px;
 }
-
+svg:hover #Twitter, 
+svg:hover #Facebook,
+svg:hover #Pinterest,
+svg:hover #Email {
+  fill: #fff !important;
+}

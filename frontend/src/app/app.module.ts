@@ -10,6 +10,7 @@ import { routing } from './app.routing';
 
 // SERVICES
 import { ApiService } from './services/api.service';
+import { NgxScrollSignalService } from './services/ngx-scroll-signal.service';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -29,6 +30,11 @@ import { QAndAComponent } from './interview/q-and-a/q-and-a.component';
 import { PullQuoteComponent } from './interview/pull-quote/pull-quote.component';
 import { ShareButtonsVerticalComponent } from './shared/share-buttons-vertical/share-buttons-vertical.component';
 import { InterviewFooterComponent } from './interview/interview-footer/interview-footer.component';
+import { Story404Component } from './story-404/story-404.component';
+import { ScrollPositionBarComponent } from './shared/scroll-position-bar/scroll-position-bar.component';
+import { ImagePairComponent } from './interview/image-pair/image-pair.component';
+import { PhotoStripComponent } from './interview/photo-strip/photo-strip.component';
+import { BigImageComponent } from './interview/big-image/big-image.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +54,12 @@ import { InterviewFooterComponent } from './interview/interview-footer/interview
     QAndAComponent,
     PullQuoteComponent,
     ShareButtonsVerticalComponent,
-    InterviewFooterComponent
+    InterviewFooterComponent,
+    Story404Component,
+    ScrollPositionBarComponent,
+    ImagePairComponent,
+    PhotoStripComponent,
+    BigImageComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +73,7 @@ import { InterviewFooterComponent } from './interview/interview-footer/interview
     ApiService,
     HttpClientModule,
     FormsModule,
+    NgxScrollSignalService,
   ],
   bootstrap: [AppComponent]
 })

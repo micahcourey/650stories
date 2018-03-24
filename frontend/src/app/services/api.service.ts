@@ -64,9 +64,12 @@ export class ApiService {
           });
           const requestedInterview = this.interviews.find(interview => interview.slug === interviewSlug);
           const i = this.interviews.indexOf(requestedInterview);
-          const nextInterview = this.interviews[i + 1];
+          let nextInterview = this.interviews[i + 1];
+          if (nextInterview === undefined) {
+            nextInterview = this.interviews[0];
+          }
           console.log(requestedInterview);
-          console.log('index of interview', i)
+          console.log('index of interview', i);
           return resolve([requestedInterview, nextInterview]);
         });
       // } else {

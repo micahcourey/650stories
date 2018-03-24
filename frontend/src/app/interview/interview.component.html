@@ -1,86 +1,47 @@
 <div *ngIf="showNav" class="navbar-container">
-  <story-nav></story-nav>
+  <story-nav [showProgress]="true" [interviewColor]="interview.color"></story-nav>
 </div>
 
 <div *ngIf="interview && !loading" class="interview-container animated" [ngClass]="{'fadeIn': loading === false}">
 
-  <!-- INTERVIEW HEADER -->
   <interview-header [interview]="interview"></interview-header>
-  <!-- END INTERVIEW HEADER -->
 
   <div id="shareable" class="interview-content-container">
-    <!-- INTERVIEW DESCRIPTION -->
     <div class="description-container">
       <h4>{{interview?.description}}</h4>
     </div>
-    <!-- END INTERVIEW DESCRIPTION -->
 
     <div class="line" [style.background]="interview.color"></div>
 
     <div *ngFor="let question of questions; let i = index;" class="question-container">
 
-      <!-- QUESTIONS AND ANSWERS -->
       <q-and-a [qa]="question"></q-and-a>
-      <!-- END QUESTIONS AND ANSWERS -->
 
-      <!-- PHOTO STRIP -->
-      <div *ngIf="i === 2" class="image-container">
-        <div class="photo-strip-container">
-          <img class="photo-strip-image" src="{{interview.photo_strip_image_1}}" alt="A portrait photo of the interviewee">
-          <img class="photo-strip-image" src="{{interview.photo_strip_image_2}}" alt="A portrait photo of the interviewee">
-          <img class="photo-strip-image" src="{{interview.photo_strip_image_3}}" alt="A portrait photo of the interviewee">
-          <img class="photo-strip-image" src="{{interview.photo_strip_image_4}}" alt="A portrait photo of the interviewee">
-        </div>
-        <div class="image-description">
-          <p>{{interview.big_image_description}}</p>
-        </div>
-      </div>
-      <!-- END PHOTO STRIP -->
+      <photo-strip *ngIf="i === 2" [interview]="interview"></photo-strip>
 
-      <!-- BIG IMAGE -->
-      <div *ngIf="i === 8" class="image-container">
-        <div class="big-image-container">
-          <img class="big-image" src="{{interview.big_image}}" alt="A portrait photo of the interviewee">
-        </div>
-        <div class="image-description">
-          <p>{{interview.big_image_description}}</p>
-        </div>
-      </div>
-      <!-- END BIG IMAGE -->
+      <big-image *ngIf="i === 8" [image]="interview.big_image" [description]="interview.big_image_description"></big-image>
 
-      <!-- PAIR IMAGE -->
-      <div *ngIf="i === 12" class="image-container">
-        <div class="image-pair-container">
-          <div class="pair-1-container">
-            <img class="image-pair1" src="{{interview.pair_image_1}}" alt="A portrait photo of the interviewee">
-          </div>
-          <div class="pair-2-container">
-            <div class="pair2-mobile">
-              <img class="image-pair2-mobile" src="{{interview.pair_image_2}}" alt="A portrait photo of the interviewee">
-            </div>
-            <img class="image-pair2" src="{{interview.pair_image_2}}" alt="A portrait photo of the interviewee">
-          </div>
-        </div>
-        <div class="image-description">
-          <p>{{interview.pair_image_description}}</p>
-        </div>
-      </div>
-      <!-- END PAIR IMAGE -->
+      <image-pair *ngIf="i === 12" [interview]="interview"></image-pair>
 
-      <!-- PULL QUOTES -->
       <pull-quote *ngIf="i === 4" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_1"></pull-quote>
       <pull-quote *ngIf="i === 6" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_2"></pull-quote>
-      <pull-quote *ngIf="i === 11" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_2"></pull-quote>
-      <pull-quote *ngIf="i === 12" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_2"></pull-quote>
-      <!-- END PULL QUOTES -->
+      <pull-quote *ngIf="i === 11" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_3"></pull-quote>
+      <pull-quote *ngIf="i === 12" [color]="interview.color" [url]="interview.slug" [quoteText]="interview.pull_quote_4"></pull-quote>
 
     </div>
+
     <div *ngIf="noQuestions" class="no-questions-container">
       <h4>This interview is in development</h4>
       <h4>Check out the interview with <a (click)="showNext()" class="no-q-link">Bego Lozano</a></h4>
     </div>
+
     <!-- MOBILE FOOTER -->
-    <interview-footer [isMobile]="true" [nextInterview]="nextInterview" [nextInterviewSlug]="nextInterviewSlug"></interview-footer>
+    <interview-footer 
+      [isMobile]="true" 
+      [nextInterview]="nextInterview" 
+      (interviewChanged)="getInterview()" 
+      [nextInterviewSlug]="nextInterviewSlug">
+    </interview-footer>
     <!-- END MOBILE FOOTER -->
 
   </div>
@@ -88,5 +49,10 @@
 </div>
 
 <!-- DESKTOP FOOTER -->
-<interview-footer [isMobile]="false" [nextInterview]="nextInterview" [nextInterviewSlug]="nextInterviewSlug" (interviewChanged)="getInterview()"></interview-footer>
+<interview-footer 
+  [isMobile]="false" 
+  [nextInterview]="nextInterview" 
+  [nextInterviewSlug]="nextInterviewSlug"
+  (interviewChanged)="getInterview()">
+</interview-footer>
 <!-- END DESKTOP FOOTER -->

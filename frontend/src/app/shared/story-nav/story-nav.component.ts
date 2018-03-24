@@ -7,6 +7,8 @@ import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angu
 })
 export class StoryNavComponent implements OnInit, OnDestroy {
   @Input() selectedTab: string;
+  @Input() interviewColor: string;
+  @Input() showProgress = false;
   @Output() leavingPage = new EventEmitter();
 
   showMobileMenu = false;

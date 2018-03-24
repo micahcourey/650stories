@@ -19,7 +19,9 @@ export class InterviewFooterComponent implements OnInit {
   }
 
   showNext() {
+    console.log('showNext clicked')
     this.router.navigate(['/interview', this.nextInterviewSlug]).then((nav) => {
+      console.log('inside router')
       this.interviewChanged.emit();
     }, (err) => {
       console.log(err);

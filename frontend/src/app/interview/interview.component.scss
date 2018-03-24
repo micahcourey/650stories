@@ -5,6 +5,16 @@ h4 {
   text-align: left;
   color: #141410;
 }
+h1 {
+  font-family: DomaineDisplay-ExtraboldItalic;
+  font-size: 48px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #ffffff;
+}
 .interview-container {
   background: linear-gradient(to right, #fafaf9 0%,#fafaf9 24.5%,#fafaf9 24.5%,white 24.5%,white 100%);
 }
@@ -20,90 +30,6 @@ h4 {
 }
 .question-container {
   margin-top: 1.5rem;
-}
-.photo-strip-container {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  margin-right: -1.25rem;
-}
-.photo-strip-container::-webkit-scrollbar {
-  display: none;
-}
-.photo-strip-image {
-  width: 320px;
-  height: 320px;
-  transform: rotate(-360deg);
-  margin-right: 1rem;
-}
-.big-image-container {
-  width: 336px;
-  height: 224px;
-  overflow: hidden;
-}
-.big-image {
-  width: 336px;
-  height: auto;
-  zoom: 115%;
-  margin: -40px 0 0 -50px;
-  // object-fit: cover;
-}
-.image-pair-container {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  margin-right: -1.25rem;
-}
-.image-pair-container::-webkit-scrollbar {
-  display: none;
-}
-.pair-1-container {
-  width: 320px;
-  height: 320px;
-  // overflow: hidden;
-  margin-right: 1rem;
-}
-.pair-2-container {
-  width: 320px;
-  height: 320px;
-}
-.image-pair1 {
-  width: 320px;
-  height: auto;
-  zoom: 100%;
-  margin-top: -80px;
-}
-.pair2-mobile {
-  width: 320px;
-  height: 320px;
-  overflow: hidden;
-}
-.image-pair2-mobile {
-  width: 320px;
-  height: auto;
-  zoom: 184%;
-  margin: -63px 0px 0px -118px;
-}
-.image-description {
-  background: #fff;
-}
-.image-description > p {
-  padding: 1rem;
-  font-size: 12px;
-  line-height: 16px;
-  font-family: Georgia;
-  font-style: italic;
-  color: #888884;
-}
-h1 {
-  font-family: DomaineDisplay-ExtraboldItalic;
-  font-size: 48px;
-  font-weight: 800;
-  font-style: italic;
-  line-height: 1;
-  letter-spacing: -0.4px;
-  text-align: left;
-  color: #ffffff;
 }
 .no-questions-container {
   height: 200px;
@@ -125,109 +51,40 @@ h1 {
   transition: 0.4s;
 }
 
-
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .interview-container {
     background: linear-gradient(to right, #fafaf9 0%,#fafaf9 19.75%,#fafaf9 19.75%,white 19.75%,white 100%);
   }
   .interview-content-container {
-    margin: 144px 26.75% 80px 14.75rem;
+    margin: 144px 26.75% 80px 14.75%;
   }
   .question-container {
-    margin-left: 192px;
+    margin-left: 18%;
     margin-top: -12px;
   }
   .image-container {
-    margin-right: -26.5vw;
-    margin-bottom: 72px;
-    margin-bottom: 72px;
+    margin: 72px -26vw 72px 72px;
   }
-  .photo-strip-container {
-    margin-left: -192px;
-    margin-right: 0px;
-    overflow: scroll;
-  }
-  .photo-strip-image {
-    width: 360px !important;
-    height: 360px;
-    min-width: 360px;
-    margin-right: 1.5rem;
-    // object-fit: contain;
-  }
-  .big-image-container {
-    width: 1128px;
-    height: 744px;
-    overflow: hidden;
-    margin-left: -216px;
-  }
-  .big-image {
-    width: 1128px;
-    height: auto;
-    zoom: 116%;
-    margin: -150px 0 0 -178px;
-    // object-fit: cover;
-  }
-  .image-pair-container {
-    margin-left: -192px;
-    margin-right: 0;
-  }
-  .pair-1-container {
-    width: 552px;
-    height: 552px;
-    overflow: hidden;
-    margin-right: 1.5rem;
-  }
-  .pair-2-container {
-    width: 552px;
-    height: 552px;
-    overflow: hidden;
-  }
-  .image-pair1 {
-    width: 552px;
-    height: auto;
-    zoom: 100%;
-    margin-top: -135px;
-  }
-  .image-pair2 {
-    width: 552px;
-    height: auto;
-    zoom: 184%;
-    margin: -106px 0 0 -205px;
-
-  }
-  .pair2-mobile {
-    display: none;
-  }
-
 }
 
-@media (min-width: 701px) and (max-width: 1250px) {
-  .question-container {
-    margin-top: 2rem;
-    margin-left: 0;
-  }
-  .image-container {
-    margin-right: -10vw;
-  }
-  .big-image-container {
-    width: 800px;
-    height: 528px;
-    overflow: hidden;
-    margin-left: -216px;
-  }
-  .big-image {
-    width: 800px;
-    height: auto;
-    zoom: 116%;
-    margin: -100px 0 0 0;
-    // object-fit: cover;
-  }
+@media (min-width: 801px) and (max-width: 1250px) {
+  // .interview-content-container {
+  //   margin: 144px 14.75% 80px 14.75%;
+  // }
+  // .question-container {
+  //   margin-top: 2rem;
+
+  // }
+  // .image-container {
+  //   margin-right: -10vw;
+  // }
 }
 
 @media (min-width: 1251px) and (max-width: 1500px) {
   .interview-container {
     overflow-x: hidden !important;
   }
+
   .big-image-container {
     width: 950px;
     height: 627px;
@@ -243,10 +100,10 @@ h1 {
   }
 }
 
-@media (max-width: 701px) {
-  .image-pair2 {
-    display: none;
-  }
-}
+// @media (max-width: 801px) {
+//   .image-pair2 {
+//     display: none;
+//   }
+// }
 
 

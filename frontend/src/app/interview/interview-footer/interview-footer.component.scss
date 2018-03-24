@@ -1,6 +1,7 @@
 .next-interview-footer-mobile {
   height: 140px;
   padding: 1rem 1rem 0 1rem;
+  cursor: pointer;
 }
 .next-interview-footer-mobile > h6 {
   font-family: Metric-Semibold;
@@ -37,7 +38,6 @@ h1 {
     align-items: flex-end;
     justify-content: center;
     width: 100%;
-    padding: 0 12%;
   }
   .footer-title {
     align-self: center;

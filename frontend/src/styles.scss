@@ -74,6 +74,20 @@ button:focus {
   width: 100%;
 }
 
+// IMAGES
+
+.image-description {
+  background: #fff;
+}
+.image-description > p {
+  padding: 1rem;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Georgia;
+  font-style: italic;
+  color: #888884;
+}
+
 // FADE IN ANIMATION
 
 .animated {

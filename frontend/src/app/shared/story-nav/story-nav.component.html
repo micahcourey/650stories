@@ -1,4 +1,5 @@
-<div class="desktop-nav-container">
+<div class="desktop-nav-container animated fadeIn">
+  <scroll-position-bar *ngIf="showProgress" [base-color]="'#ecece8'" [signal-color]="interviewColor" class="isHorizontal"></scroll-position-bar>
   <div class="links">
     <div routerLink="/" class="home">
       <img src="/assets/icons/Logo.svg" alt="650 Stories logo">
@@ -12,7 +13,7 @@
   <div class="line"></div>
 </div>
 
-<div class="mobile-nav-container">
+<div class="mobile-nav-container animated fadeIn">
   <div routerLink="/" class="home">
     <svg width="106.29px" height="48px" viewBox="0 0 124 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->

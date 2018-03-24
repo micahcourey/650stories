@@ -32,6 +32,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 36px;
+  height: 112px;
+  background-color: #fff;
 }
 .directory-subfooter > h3 {
   font-family: Georgia;
@@ -120,6 +122,12 @@ h5 {
   z-index: 3;
   text-transform: uppercase;
 }
+.overlay-button:hover {
+  opacity: 0.8;
+  background-color: #141410;
+  transition: 0.4s;
+  color: #fff;
+}
 .overlay-button-active {
   background: #fff !important;
   color: #2b2b27 !important;
@@ -139,6 +147,12 @@ h5 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+.sort-container > select:hover {
+  opacity: 0.8;
+  background-color: #141410;
+  transition: 0.4s;
+  color: #fff;
 }
 .filter {
   position: absolute;
@@ -214,7 +228,7 @@ h5 {
     justify-content: space-around;
     align-items: center;
 
-    width: 86vw;
+    width: 70.5vw;
   }
   .footer-container {
     width: 70.5vw;
