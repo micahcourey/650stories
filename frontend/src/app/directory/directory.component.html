@@ -2,7 +2,7 @@
   <story-nav [selectedTab]="'directory'"></story-nav>
 </div>
 
-<div id="shareable" class="directory-container animated fadeIn">
+<div class="directory-container animated fadeIn">
   <div class="header-container">
     <story-header [title]="'Interviews'"></story-header>
   </div>
@@ -38,6 +38,7 @@
     <div class="input-container">
       <input [(ngModel)]="userEmail" type="email" placeholder="your email address" (keyup.enter)="submitEmail()" />
       <div class="input-button"  (click)="submitEmail()">
+        <h6>Subscribe</h6>
         <img src="/assets/icons/Arrow-fff.svg" alt="arrow pointing right">
       </div>
     </div>

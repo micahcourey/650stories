@@ -2,7 +2,7 @@
   [style.background]="interview.color"
   *ngFor="let interview of interviews; let i = index"
   [ngClass]="{'interview-box-reversed': i % 2 != 0}">
-  <div id="shareable" class="article-container">
+  <div class="article-container">
     <div class="interview-content"> 
       <p class="interview-date">{{interview.date | date:'MMMM d, y' | uppercase}}</p>
       <h2 class="interview-title">{{interview.interviewee_first_name}}</h2>
@@ -13,7 +13,7 @@
       <p class="interview-description">{{interview.short_description}}</p>
     </div>
     <div class="interview-button">
-      <story-button [routerLink]="['/interview', interview.slug]">
+      <story-button [routerLink]="['/interview', interview.slug]" routerLinkActive="active">
         READ THE INTERVIEW
       </story-button>
     </div>

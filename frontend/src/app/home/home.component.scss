@@ -27,7 +27,7 @@
   font-family: DomaineDisplay-ExtraboldItalic;
   font-size: 160px;
   font-weight: 800;
-  font-style: italic;
+  // font-style: italic;
   font-stretch: normal;
   line-height: 0.95;
   letter-spacing: -1px;
@@ -147,9 +147,14 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .desktop-text {
+  .desktop-text, .desktop-nav {
     display: none;
   }
 
+}
 
+@media (min-width: 800px) {
+  .mobile-nav {
+    display: none;
+  }
 }

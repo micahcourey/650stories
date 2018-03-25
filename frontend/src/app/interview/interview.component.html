@@ -1,7 +1,6 @@
 <div *ngIf="showNav" class="navbar-container">
   <story-nav [showProgress]="true" [interviewColor]="interview.color"></story-nav>
 </div>
-
 <div *ngIf="interview && !loading" class="interview-container animated" [ngClass]="{'fadeIn': loading === false}">
 
   <interview-header [interview]="interview"></interview-header>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, HostListener, OnChanges, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as highlightShare from 'highlight-share';
 import * as twitterSharer from 'highlight-share/dist/sharers/twitter';
@@ -14,7 +14,7 @@ import { ApiService } from '../services/api.service';
   templateUrl: './interview.component.html',
   styleUrls: ['./interview.component.scss']
 })
-export class InterviewComponent implements OnInit, OnChanges {
+export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
   title = 'app';
   nextInterview: any;
   selectionShare: any;
@@ -47,6 +47,9 @@ export class InterviewComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     console.log('onChanges Fired')
+  }
+
+  ngOnDestroy() {
 
   }
 

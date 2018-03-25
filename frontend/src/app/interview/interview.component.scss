@@ -9,7 +9,7 @@ h1 {
   font-family: DomaineDisplay-ExtraboldItalic;
   font-size: 48px;
   font-weight: 800;
-  font-style: italic;
+  // font-style: italic;
   line-height: 1;
   letter-spacing: -0.4px;
   text-align: left;
@@ -43,7 +43,7 @@ h1 {
   cursor: pointer;
   font-family: DomaineDisplay-ExtraboldItalic;
   font-weight: 800;
-  font-style: italic;
+  // font-style: italic;
   color: #141410;
 }
 .no-q-link:hover {
@@ -59,7 +59,7 @@ h1 {
     margin: 144px 26.75% 80px 14.75%;
   }
   .question-container {
-    margin-left: 18%;
+    margin-left: 15.5%;
     margin-top: -12px;
   }
   .image-container {
@@ -68,6 +68,10 @@ h1 {
 }
 
 @media (min-width: 801px) and (max-width: 1250px) {
+  // .question-container {
+  //   margin-left: 18%;
+  //   margin-top: -12px;
+  // }
   // .interview-content-container {
   //   margin: 144px 14.75% 80px 14.75%;
   // }

@@ -20,8 +20,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   title = 'app';
   interviews: Array<any>;
   selectionShare: any;
-  showNav: boolean = false;
+  showNav = false;
+  showMobileNav = false;
   scrollIndex = 0;
+  previousHeight = 0;
 
   constructor(private http: HttpClient, private _apiService: ApiService) {
     this.interviews = [];
@@ -47,7 +49,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
     if (!this.showNav && this.scrollIndex > 0) {
       this.showNav = true;
+      this.showMobileNav = true;
     }
+    // console.log('event', event.path[0].documentElement.scrollTop);
+    const height = event.path[0].documentElement.scrollTop;
+    if (height === 0) {
+      this.showMobileNav = false;
+    } else if (this.previousHeight > height) {
+      this.showMobileNav = true;
+    } else {
+      this.showMobileNav = false;
+    }
+    this.previousHeight = event.path[0].documentElement.scrollTop;
     this.scrollIndex++;
   }
 

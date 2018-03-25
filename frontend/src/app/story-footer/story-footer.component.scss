@@ -63,6 +63,19 @@
   border-left: solid 2px #141410;
   border-bottom: solid 4px #141410;
 }
+a:hover {
+  background-color: #141410;
+  transition: 0.4s;
+  color: #fff;
+}
+a {
+  cursor: pointer;
+}
+svg:hover #Facebook,
+svg:hover #Instagram {
+  fill: #fff !important;
+}
+
 @media (min-width: 1101px) and (max-width: 1399px)  {
   .footer-container {
     width: 74vw;

@@ -14,6 +14,11 @@
   src: url('/assets/fonts/Metric-Semibold.otf');
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -88,7 +93,7 @@ button:focus {
   color: #888884;
 }
 
-// FADE IN ANIMATION
+// ANIMATIONS
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -97,15 +102,7 @@ button:focus {
   animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
+// FADE IN ANIMATION
 
 @keyframes fadeIn {
   from {
@@ -122,3 +119,19 @@ button:focus {
   animation-name: fadeIn;
 }
 
+// FADE OUT ANIMATION
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}

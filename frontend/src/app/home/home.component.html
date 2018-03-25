@@ -1,5 +1,8 @@
-<div *ngIf="showNav" class="navbar-container">
+<div *ngIf="showNav" class="navbar-container desktop-nav">
   <story-nav (leavingPage)="showNav = false;"></story-nav>
+</div>
+<div *ngIf="showMobileNav" class="navbar-container mobile-nav animated" [ngClass]="{'fadeIn': showMobileNav === false}">
+  <story-nav></story-nav>
 </div>
 <div class="home-container animated fadeIn">
 
@@ -21,7 +24,7 @@
   <div class="sub-footer">
     <div class="sub-content">
       <h4 class="interview-count">{{interviews?.length}} interviews and counting</h4>
-      <story-button routerLink="/directory">VIEW ALL <span class="desktop-text">INTERVIEWS</span></story-button>
+      <story-button routerLink="/directory" routerLinkActive="active">VIEW ALL <span class="desktop-text">INTERVIEWS</span></story-button>
     </div>
   </div>
 
