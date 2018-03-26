@@ -15,7 +15,9 @@
     <div class="team">
       <div class="member-container" *ngFor="let teamMember of teamMembers">
         <div class="member-image-container" [ngClass]="{'logo-image': teamMember.name === 'Raziel Ungar Team'}">
-          <img *ngIf="teamMember.imageUrl !== ''" class="member-image" src="{{teamMember.imageUrl}}" alt="A portrait of {{teamMember.name}}">
+          <img *ngIf="teamMember.imageUrl !== ''" class="member-image" 
+            src="{{teamMember.imageUrl}}" alt="A portrait of {{teamMember.name}}"
+            [ngClass]="{'ian-image': teamMember.name === 'Ian Tuttle'}">
           <div *ngIf="teamMember.imageUrl === ''" class="member-image"></div>
           <img class="pacific-logo" *ngIf="teamMember.name === 'Raziel Ungar Team'" src="https://s3-us-west-1.amazonaws.com/650stories/about_portraits/pacific_union_logo.png" alt="Pacific Union International logo">
         </div>
@@ -23,7 +25,7 @@
         <p class="member-title">{{teamMember.position}}</p>
         <p class="description-text">{{teamMember.description}}</p>
         <div *ngIf="teamMember.linkName" class="link-text">
-          {{teamMember.linkName}}
+          <a [href]="teamMember.link" target="_blank">{{teamMember.linkName}}</a>
           <div class="link-bg"></div>
         </div>
       </div>
@@ -31,7 +33,7 @@
           <h6 class="about-header interviews-header">Interviews</h6>
           <h4 class="about-h4">If you have a suggestion for an interview subject, please email us at:</h4>
           <div class="email">
-            <h4 class="about-h4">interviews@650stories.com</h4>
+            <a class="about-h4" href="mailto:interviews@650stories.com?Subject=Hello" target="_top">interviews@650stories.com</a>
             <div class="link-bg"></div>
           </div>
       </div>

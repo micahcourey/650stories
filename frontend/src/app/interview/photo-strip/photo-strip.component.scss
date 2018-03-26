@@ -39,19 +39,8 @@
   }
 }
 
-@media (min-width: 800px) {
-  .image-container {
-    margin: 72px -26vw 72px 72px;
-  }
+@media (max-width: 799px) {
   .photo-strip-container {
-    margin-left: -216px;
-    margin-right: 0px;
-    overflow: scroll;
-  }
-  .photo-strip-image {
-    width: 360px !important;
-    height: 360px;
-    min-width: 360px;
-    margin-right: 1.5rem;
+    -webkit-overflow-scrolling: touch;
   }
 }

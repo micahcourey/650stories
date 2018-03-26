@@ -12,6 +12,8 @@
 .fb:hover, .twitter:hover, .pinterest:hover, .email:hover {
   background-color: #141410;
   transition: 0.4s;
+}
+.fb:hover #Facebook, .twitter:hover #Twitter, .pinterest:hover #Pinterest, .email:hover #Email {
   fill: #fff;
 }
 .twitter, .fb, .pinterest {
@@ -23,9 +25,9 @@
   width: 40px;
   height: 40px;
 }
-svg:hover #Twitter, 
-svg:hover #Facebook,
-svg:hover #Pinterest,
-svg:hover #Email {
-  fill: #fff !important;
-}
+// svg:hover #Twitter, 
+// svg:hover #Facebook,
+// svg:hover #Pinterest,
+// svg:hover #Email {
+//   fill: #fff !important;
+// }

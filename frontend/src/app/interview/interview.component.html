@@ -3,7 +3,7 @@
 </div>
 <div *ngIf="interview && !loading" class="interview-container animated" [ngClass]="{'fadeIn': loading === false}">
 
-  <interview-header [interview]="interview"></interview-header>
+  <interview-header [readingMins]="readingMins" [interview]="interview"></interview-header>
 
   <div id="shareable" class="interview-content-container">
     <div class="description-container">

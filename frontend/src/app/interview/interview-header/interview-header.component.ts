@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class InterviewHeaderComponent implements OnInit {
   @Input() interview;
+  @Input() readingMins: number;
 
   constructor() { }
 

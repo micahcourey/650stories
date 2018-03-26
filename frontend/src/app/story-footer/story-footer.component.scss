@@ -68,12 +68,11 @@ a:hover {
   transition: 0.4s;
   color: #fff;
 }
+a:hover #Facebook, a:hover #Instagram {
+  fill: #fff !important;
+}
 a {
   cursor: pointer;
-}
-svg:hover #Facebook,
-svg:hover #Instagram {
-  fill: #fff !important;
 }
 
 @media (min-width: 1101px) and (max-width: 1399px)  {

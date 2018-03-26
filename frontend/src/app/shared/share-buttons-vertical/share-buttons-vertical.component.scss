@@ -10,10 +10,11 @@
   align-items: center;
 }
 .fb:hover, .twitter:hover, .pinterest:hover, .email:hover {
-  opacity: 0.8;
   background-color: #141410;
   transition: 0.4s;
-  color: #fff;
+}
+.fb:hover #Facebook, .twitter:hover #Twitter, .pinterest:hover #Pinterest, .email:hover #Email {
+  fill: #fff;
 }
 .twitter, .fb, .pinterest {
   width: 40px;
@@ -26,10 +27,4 @@
 }
 a {
   cursor: pointer;
-}
-svg:hover #Twitter, 
-svg:hover #Facebook,
-svg:hover #Pinterest,
-svg:hover #Email {
-  fill: #fff !important;
 }

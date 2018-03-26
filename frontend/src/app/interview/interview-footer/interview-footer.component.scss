@@ -30,10 +30,11 @@ h1 {
     height: 456px;
     display: flex;
     align-content: flex-end;
-    margin-top: 168px;
     cursor: pointer;
   }
   .next-interview-footer-desktop {
+    background: linear-gradient(to right, #141410 0%,#141410 19.75%,#141410 19.75%,white 19.75%,white 100%);
+    opacity: 0.97;
     display: flex;
     align-items: flex-end;
     justify-content: center;

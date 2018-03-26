@@ -1,10 +1,10 @@
 <div *ngIf="showNav" class="navbar-container desktop-nav">
   <story-nav (leavingPage)="showNav = false;"></story-nav>
 </div>
-<div *ngIf="showMobileNav" class="navbar-container mobile-nav animated" [ngClass]="{'fadeIn': showMobileNav === false}">
+<div *ngIf="showMobileNav" class="navbar-container mobile-nav" [ngClass]="{'fadeIn': showMobileNav === false}">
   <story-nav></story-nav>
 </div>
-<div class="home-container animated fadeIn">
+<div class="home-container">
 
   <div class="header">
     <header-logo></header-logo>

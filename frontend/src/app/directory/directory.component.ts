@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { animate, state, transition, trigger, style, keyframes } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -14,7 +15,7 @@ import { ApiService } from '../services/api.service';
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.scss']
+  styleUrls: ['./directory.component.scss'],
 })
 export class DirectoryComponent implements OnInit, OnDestroy {
   showNav = false;
@@ -24,6 +25,7 @@ export class DirectoryComponent implements OnInit, OnDestroy {
   userEmail: string;
   overlayButtons: Array<any>;
   scrollIndex = 0;
+  isHovering = false;
 
   constructor(private http: HttpClient, private _apiService: ApiService) {
     this.interviews = [];
@@ -81,6 +83,15 @@ export class DirectoryComponent implements OnInit, OnDestroy {
         }
       }
     });
+  }
+
+  toggleHoverEffect() {
+    if (this.isHovering) {
+      this.isHovering = false;
+    } else {
+      this.isHovering = true;
+    }
+    console.log('hovering ', this.isHovering)
   }
 
 }

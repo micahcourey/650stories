@@ -75,14 +75,17 @@
 
 }
 
-@media (min-width: 801px) and (max-width: 1250px) {
+@media (min-width: 800px) and (max-width: 1250px) {
   .image-container {
     margin-right: -10vw;
   }
 }
 
-@media (max-width: 801px) {
+@media (max-width: 799px) {
   .image-pair2 {
     display: none;
+  }
+  .image-pair-container {
+    -webkit-overflow-scrolling: touch;
   }
 }

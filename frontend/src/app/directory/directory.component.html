@@ -2,7 +2,7 @@
   <story-nav [selectedTab]="'directory'"></story-nav>
 </div>
 
-<div class="directory-container animated fadeIn">
+<div class="directory-container">
   <div class="header-container">
     <story-header [title]="'Interviews'"></story-header>
   </div>
@@ -15,9 +15,10 @@
         {{button.title}}
       </div>
     </div>
-    <div class="sort-container">
+    <div class="sort-container" [ngClass]="{'white-icon': isHovering}">
       <h5 class="sort">Sort</h5>
-      <select class="overlay-button" name="sort">
+      <select class="overlay-button" name="sort"  
+        (mouseenter)="toggleHoverEffect()" (mouseleave)="toggleHoverEffect()">
         <option value="mostRecent">most recent</option>
       </select>
     </div>

@@ -26,9 +26,11 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
   questions: any;
   scrollIndex = 0;
   nextInterviewSlug: string;
+  readingMins: number;
 
   constructor(private _apiService: ApiService, private route: ActivatedRoute, private router: Router) {
     this.nextInterviewSlug = '';
+    this.readingMins = 0;
     this.questions = [];
     this.interview = {};
     this.getInterview();
@@ -46,7 +48,7 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnChanges() {
-    console.log('onChanges Fired')
+    console.log('onChanges Fired');
   }
 
   ngOnDestroy() {
@@ -60,6 +62,8 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
       this._apiService.getInterview(this.route.snapshot.params['slug']).then((interviews: any) => {
         console.log('interview component interviews ', interviews);
         this.interview = interviews[0];
+        this.readingMins = this.calcReadingTime(this.interview.questions);
+        console.log('Reading Time: ', this.readingMins + ' minutes');
         if (interviews[1] !== undefined) {
           this.nextInterview = interviews[1];
           console.log(this.nextInterview);
@@ -82,6 +86,16 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
       });
     }, 1);
 
+  }
+
+  calcReadingTime(questions: Array<any>) {
+    let words = 0;
+    questions.forEach((question) => {
+      let qWords = 0;
+      qWords = question.question_text.split(' ').length + question.answer_text.split(' ').length;
+      words = qWords + words;
+    });
+    return Math.round(words / 250);
   }
 
   showNext() {

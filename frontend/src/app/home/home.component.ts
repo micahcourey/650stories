@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
+import { animate, state, transition, trigger, style, keyframes } from '@angular/animations';
 import 'rxjs/add/operator/map';
 import * as highlightShare from 'highlight-share';
 import * as twitterSharer from 'highlight-share/dist/sharers/twitter';
@@ -14,7 +15,19 @@ import { ApiService } from '../services/api.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  // animations:[
+  //   trigger('show', [
+  //       transition(':enter', [
+  //           style({ opacity: 0 }),
+  //           animate(1000, style({ opacity: 1 }))
+  //       ]),
+  //       transition(':leave', [
+  //           style({ opacity: 1 }),
+  //           animate(1000, style({ opacity: 0 }))
+  //       ])
+  //   ])
+  // ]
 })
 export class HomeComponent implements OnInit, OnDestroy {
   title = 'app';

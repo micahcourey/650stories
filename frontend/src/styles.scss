@@ -85,12 +85,17 @@ button:focus {
   background: #fff;
 }
 .image-description > p {
-  padding: 1rem;
+  padding: 21px;
   font-size: 12px;
   line-height: 16px;
   font-family: Georgia;
   font-style: italic;
   color: #888884;
+}
+@media (min-width: 800px) {
+  .image-description {
+    margin-left: -178px;
+  }
 }
 
 // ANIMATIONS
