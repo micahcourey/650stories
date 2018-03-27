@@ -175,6 +175,9 @@ h5 {
   .input-button > h6 {
     display: none;
   }
+  .desktop-text, .desktop-nav {
+    display: none;
+  }
 }
 
 @media (min-width: 1201px) and (max-width: 1400px) {
@@ -267,5 +270,12 @@ h5 {
     color: #ffffff;
     text-transform: uppercase;
     margin-right: 6px;
+  }
+
+}
+
+@media (min-width: 800px) {
+  .mobile-nav {
+    display: none;
   }
 }

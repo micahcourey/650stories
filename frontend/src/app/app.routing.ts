@@ -8,11 +8,11 @@ import { DirectoryComponent } from './directory/directory.component';
 import { Story404Component} from './story-404/story-404.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent, data: { state: 'home' } },
-  { path: 'about', component: AboutComponent, data: { state: 'about' } },
-  { path: 'interview', component: InterviewComponent, data: { state: 'interview' }  },
-  { path: 'interview/:slug', component: InterviewComponent  },
-  { path: 'directory', component: DirectoryComponent, data: { state: 'directory' }  },
+  { path: '', component: HomeComponent, data: { animation: 'home' } },
+  { path: 'about', component: AboutComponent, data: { animation: 'about' } },
+  { path: 'interview', component: InterviewComponent, data: { animation: 'interview' } },
+  { path: 'interview/:slug', component: InterviewComponent, data: { animation: '**' } },
+  { path: 'directory', component: DirectoryComponent, data: { animation: 'directory' } },
   { path: '**', component: Story404Component },
 ];
 

@@ -22,6 +22,8 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
   loading = false;
   noQuestions = false;
   lastInterview = false;
+  showMobileNav = false;
+  previousHeight: number;
   interview: any;
   questions: any;
   scrollIndex = 0;
@@ -31,6 +33,7 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
   constructor(private _apiService: ApiService, private route: ActivatedRoute, private router: Router) {
     this.nextInterviewSlug = '';
     this.readingMins = 0;
+    this.previousHeight = 0;
     this.questions = [];
     this.interview = {};
     this.getInterview();
@@ -109,7 +112,17 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
     if (!this.showNav && this.scrollIndex > 0) {
       this.showNav = true;
+      this.showMobileNav = true;
     }
+    const height = event.path[0].documentElement.scrollTop;
+    if (height === 0) {
+      this.showMobileNav = false;
+    } else if (this.previousHeight > height) {
+      this.showMobileNav = true;
+    } else {
+      this.showMobileNav = false;
+    }
+    this.previousHeight = event.path[0].documentElement.scrollTop;
     this.scrollIndex++;
   }
 

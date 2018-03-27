@@ -1,7 +1,9 @@
-<div *ngIf="showNav" class="navbar-container desktop-nav">
-  <story-nav (leavingPage)="showNav = false;"></story-nav>
+<div class="navbar-container desktop-nav animated slideInDown" 
+  [ngClass]="{'slideOutUp': showNav === false}">
+  <story-nav (leavingPage)="showNav = false"></story-nav>
 </div>
-<div *ngIf="showMobileNav" class="navbar-container mobile-nav" [ngClass]="{'fadeIn': showMobileNav === false}">
+<div  class="navbar-container mobile-nav animated slideInDown" 
+  [ngClass]="{'slideOutUp': showMobileNav === false}">
   <story-nav></story-nav>
 </div>
 <div class="home-container">

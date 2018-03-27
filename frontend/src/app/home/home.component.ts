@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, HostBinding } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { animate, state, transition, trigger, style, keyframes } from '@angular/animations';
@@ -16,18 +17,6 @@ import { ApiService } from '../services/api.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  // animations:[
-  //   trigger('show', [
-  //       transition(':enter', [
-  //           style({ opacity: 0 }),
-  //           animate(1000, style({ opacity: 1 }))
-  //       ]),
-  //       transition(':leave', [
-  //           style({ opacity: 1 }),
-  //           animate(1000, style({ opacity: 0 }))
-  //       ])
-  //   ])
-  // ]
 })
 export class HomeComponent implements OnInit, OnDestroy {
   title = 'app';
@@ -37,8 +26,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   showMobileNav = false;
   scrollIndex = 0;
   previousHeight = 0;
+  animate = '';
+  triggerAnimation = false;
 
-  constructor(private http: HttpClient, private _apiService: ApiService) {
+  constructor(private http: HttpClient, private _apiService: ApiService, private router: Router) {
     this.interviews = [];
   }
 
@@ -47,6 +38,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this._apiService.getInterviews().then((interviews: any) => {
       console.log('interviews', interviews)
       this.interviews = interviews;
+
     });
     this.selectionShare = highlightShare({
       selector: '#shareable',
@@ -56,7 +48,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
   
   ngOnDestroy() {
-    this.showNav = false;
+
   }
 
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
@@ -64,7 +56,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.showNav = true;
       this.showMobileNav = true;
     }
-    // console.log('event', event.path[0].documentElement.scrollTop);
     const height = event.path[0].documentElement.scrollTop;
     if (height === 0) {
       this.showMobileNav = false;

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import {trigger, animate, style, group, animateChild, query, stagger, transition, state} from '@angular/animations';
@@ -15,24 +15,42 @@ import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
-  template: `<main [@routerTransition]="page.activatedRouteData.state">
-              <router-outlet  #page="outlet" class="router-outlet"></router-outlet>
-            </main>`,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   animations: [
-    trigger('routerTransition', [
-      transition('* <=> *', [    
-        query(':enter :leave', style({ position: 'fixed', opacity: 1 }), { optional: true }),
-        group([ 
-          query(':enter', [
-            style({ opacity:0 }),
-            animate('1200ms ease-in-out', style({ opacity:1 })),
-          ], { optional: true }),
-          query(':leave', [
-            style({ opacity:1 }),
-            animate('1200ms ease-in-out', style({ opacity :0 }))], { optional: true }),
-        ])
-      ])
+    trigger('routeAnimation', [
+      
+      transition( '* => *', [
+        query(':enter,:leave', [
+          style({
+            position: 'fixed', width: '100%', height: '5000px', 'overflow-y': 'scroll'
+          })
+        ],{ optional: true }),
+        query(':enter', 
+            [
+                style({ opacity: 0 })
+            ], 
+            { optional: true }
+        ),
+
+        query(':leave', 
+            [
+                style({ opacity: 1 }),
+                animate(300, style({ opacity: 0 }))
+            ], 
+            { optional: true }
+        ),
+
+        query(':enter', 
+            [
+                style({ opacity: 0 }),
+                animate(300, style({ opacity: 1 }))
+            ], 
+            { optional: true }
+        )
+
+    ])
     ])
    ]
 })
@@ -55,7 +73,12 @@ export class AppComponent implements OnInit {
     });
     this.selectionShare.init();
   }
-  
+
+  getRouteAnimation(outlet) {
+    console.log(outlet.activatedRouteData.animation)
+    return outlet.activatedRouteData.animation;
+  }
+
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
     if (!this.showNav) {
       this.showNav = true;

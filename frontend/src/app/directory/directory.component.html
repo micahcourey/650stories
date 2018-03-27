@@ -1,7 +1,11 @@
-<div *ngIf="showNav" class="navbar-container">
-  <story-nav [selectedTab]="'directory'"></story-nav>
+<div class="navbar-container desktop-nav animated slideInDown" 
+  [ngClass]="{'slideOutUp': showNav === false}">
+  <story-nav (leavingPage)="showNav = false"></story-nav>
 </div>
-
+<div  class="navbar-container mobile-nav animated slideInDown" 
+  [ngClass]="{'slideOutUp': showMobileNav === false}">
+  <story-nav></story-nav>
+</div>
 <div class="directory-container">
   <div class="header-container">
     <story-header [title]="'Interviews'"></story-header>
@@ -50,7 +54,7 @@
   </div>
 </div>
 
-<div *ngIf="showFilters" class="filter-overlay">
+<div *ngIf="showFilters" class="filter-overlay animated fadeIn">
   <div class="overlay-container">
     <h5>Filter</h5>
     <div *ngFor="let button of overlayButtons" class="overlay-button"

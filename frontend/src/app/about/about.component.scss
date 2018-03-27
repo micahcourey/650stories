@@ -181,7 +181,7 @@ a:hover + .link-bg {
     width: 100%;
     margin: 128px 12px 12px 12px;
   }
-  
+
 
 }
 @media (max-width: 1166px) {
@@ -209,4 +209,13 @@ a:hover + .link-bg {
   .ian-image {
     zoom: 125% !important;
   }
- }
+  .desktop-text, .desktop-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .mobile-nav {
+    display: none;
+  }
+}

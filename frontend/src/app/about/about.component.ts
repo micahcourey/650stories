@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, HostBinding } from '@angular/core';
+import {trigger, style, animate, transition} from '@angular/animations';
 
 interface TeamMember {
   name: string;
@@ -12,17 +13,19 @@ interface TeamMember {
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit, OnDestroy {
-
   teamMembers: Array<TeamMember>;
   showNav = false;
+  showMobileNav = false;
+  previousHeight: number;
   scrollIndex: number;
 
   constructor() {
     this.teamMembers = this.getTeamMembers();
     this.scrollIndex = 0;
+    this.previousHeight = 0;
     window.scrollTo(0, 0);
   }
 
@@ -35,11 +38,20 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
-      console.log(event)
-      if (!this.showNav && this.scrollIndex > 0) {
-        this.showNav = true;
-      }
-      this.scrollIndex++;
+    if (!this.showNav && this.scrollIndex > 0) {
+      this.showNav = true;
+      this.showMobileNav = true;
+    }
+    const height = event.path[0].documentElement.scrollTop;
+    if (height === 0) {
+      this.showMobileNav = false;
+    } else if (this.previousHeight > height) {
+      this.showMobileNav = true;
+    } else {
+      this.showMobileNav = false;
+    }
+    this.previousHeight = event.path[0].documentElement.scrollTop;
+    this.scrollIndex++;
   }
 
   getTeamMembers() {

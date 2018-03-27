@@ -5,6 +5,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { ShareModule } from '@ngx-share/core';
+import { RouterModule } from '@angular/router';
 
 // ROUTING
 import { routing } from './app.routing';
@@ -67,6 +68,7 @@ import { BigImageComponent } from './interview/big-image/big-image.component';
     BrowserAnimationsModule,
     HttpClientModule,
     routing,
+    RouterModule,
     FormsModule,
     ShareModule.forRoot(),
   ],

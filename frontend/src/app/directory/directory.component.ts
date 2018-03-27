@@ -19,7 +19,9 @@ import { ApiService } from '../services/api.service';
 })
 export class DirectoryComponent implements OnInit, OnDestroy {
   showNav = false;
+  showMobileNav = false;
   showFilters = false;
+  previousHeight: number;
   interviews: Array<any>;
   selectionShare: any;
   userEmail: string;
@@ -30,6 +32,7 @@ export class DirectoryComponent implements OnInit, OnDestroy {
   constructor(private http: HttpClient, private _apiService: ApiService) {
     this.interviews = [];
     this.userEmail = '';
+    this.previousHeight = 0;
     this.overlayButtons = [
       { title: 'show all', selected: true },
       { title: 'category 1', selected: false },
@@ -57,7 +60,17 @@ export class DirectoryComponent implements OnInit, OnDestroy {
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
     if (!this.showNav && this.scrollIndex > 0) {
       this.showNav = true;
+      this.showMobileNav = true;
     }
+    const height = event.path[0].documentElement.scrollTop;
+    if (height === 0) {
+      this.showMobileNav = false;
+    } else if (this.previousHeight > height) {
+      this.showMobileNav = true;
+    } else {
+      this.showMobileNav = false;
+    }
+    this.previousHeight = event.path[0].documentElement.scrollTop;
     this.scrollIndex++;
   }
 
