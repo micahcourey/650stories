@@ -37,19 +37,20 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   @HostListener('window:scroll', ['$event']) onScrollEvent(event) {
-    if (!this.showNav && this.scrollIndex > 0) {
+    if ((!this.showNav || !this.showMobileNav) && this.scrollIndex > 0) {
       this.showNav = true;
       this.showMobileNav = true;
     }
-    const height = event.path[0].documentElement.scrollTop;
-    if (height === 0) {
-      this.showMobileNav = false;
-    } else if (this.previousHeight > height) {
-      this.showMobileNav = true;
-    } else {
-      this.showMobileNav = false;
-    }
-    this.previousHeight = event.path[0].documentElement.scrollTop;
+    // const height = event.path[0].documentElement.scrollTop;
+    // if (height === 0) {
+    //   this.showMobileNav = false;
+    // }
+    // else if (this.previousHeight > height) {
+    //   this.showMobileNav = true;
+    // } else {
+    //   this.showMobileNav = false;
+    // }
+    // this.previousHeight = event.path[0].documentElement.scrollTop;
     this.scrollIndex++;
   }
 

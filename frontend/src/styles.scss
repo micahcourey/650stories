@@ -119,6 +119,16 @@ button:focus {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
@@ -136,6 +146,16 @@ button:focus {
   }
 }
 
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -143,8 +163,9 @@ button:focus {
 
 @-webkit-keyframes slideInDown {
   from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: translate3d(0, -99.9%, 0);
+    transform: translate3d(0, -99.9%, 0);
     visibility: visible;
   }
 
@@ -156,8 +177,9 @@ button:focus {
 
 @keyframes slideInDown {
   from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: translate3d(0, -99.9%, 0);
+    transform: translate3d(0, -99.9%, 0);
     visibility: visible;
   }
 
@@ -174,27 +196,29 @@ button:focus {
 
 @-webkit-keyframes slideOutUp {
   from {
+    -webkit-transform-origin: 0 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -99.9%, 0);
+    transform: translate3d(0, -99.9%, 0);
   }
 }
 
 @keyframes slideOutUp {
   from {
+    -webkit-transform-origin: 0 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -99.9%, 0);
+    transform: translate3d(0, -99.9%, 0);
   }
 }
 

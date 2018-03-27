@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./image-pair.component.scss']
 })
 export class ImagePairComponent implements OnInit {
-  @Input() interview: Array<any>;
+  @Input() interview: any;
 
   constructor() { }
 
