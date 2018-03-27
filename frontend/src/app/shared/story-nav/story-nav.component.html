@@ -1,4 +1,4 @@
-<div class="desktop-nav-container">
+<div *ngIf="showNav" class="desktop-nav-container">
   <scroll-position-bar *ngIf="showProgress" [base-color]="'#ecece8'" [signal-color]="interviewColor" class="isHorizontal"></scroll-position-bar>
   <div class="links">
     <div routerLink="/" class="home" routerLinkActive="active">
@@ -32,7 +32,7 @@
   <div *ngIf="showProgress" class="line"></div>
 </div>
 
-<div class="mobile-nav-container">
+<div *ngIf="showNav" class="mobile-nav-container">
   <div routerLink="/" routerLinkActive="active" class="home">
     <svg width="132px" height="48px" viewBox="0 0 124 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->

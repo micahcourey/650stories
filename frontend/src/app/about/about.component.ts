@@ -30,7 +30,6 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-   
   }
 
   ngOnDestroy() {

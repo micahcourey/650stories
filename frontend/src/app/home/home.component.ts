@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
     this.selectionShare.init();
   }
-  
+
   ngOnDestroy() {
 
   }
