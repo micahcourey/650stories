@@ -13,7 +13,8 @@ export class ApiService {
   private boxColors: Array<any>;
 
   constructor(private http: HttpClient) {
-    this.apiUrl = 'http://159.65.78.102/';
+    // this.apiUrl = 'http://159.65.78.102/';
+    this.apiUrl = 'http://159.65.110.30/';
     this.interviews = [];
     this.boxColors = ['#1cb1d7', '#58e2b0', '#ffcf2d'];
   }
@@ -43,7 +44,7 @@ export class ApiService {
 
   getInterviews() {
     return new Promise((resolve, reject) => {
-      this.getData('interview').then((data: Array<any>) => {
+      this.getData('imagetest').then((data: Array<any>) => {
         this.interviews = data;
         this.setColors();
         console.log('interviews', this.interviews);

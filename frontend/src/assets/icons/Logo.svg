@@ -10,10 +10,10 @@
                 <g>
                     <rect id="Overlay" fill="#141410" opacity="0.1" x="8" y="8" width="48" height="48"></rect>
                     <rect id="Frame" stroke="#141410" stroke-width="4" x="2" y="2" width="44" height="44"></rect>
-                    <text id="Stories" font-family="MetricTest-Semibold, Metric Test" font-size="16" font-weight="600" line-spacing="10" letter-spacing="2" fill="#141410">
+                    <text id="Stories" font-family="Metric-Semibold, Metric Test" font-size="16" font-weight="600" line-spacing="10" letter-spacing="2" fill="#141410">
                         <tspan x="56" y="29">STORIES</tspan>
                     </text>
-                    <text id="650" font-family="MetricTest-Semibold, Metric Test" font-size="16" font-weight="600" line-spacing="10" letter-spacing="2" fill="#141410">
+                    <text id="650" font-family="Metric-Semibold, Metric Test" font-size="16" font-weight="600" line-spacing="10" letter-spacing="2" fill="#141410">
                         <tspan x="10" y="29">650</tspan>
                     </text>
                 </g>
