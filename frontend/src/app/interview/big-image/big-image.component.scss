@@ -5,9 +5,9 @@
 }
 .big-image {
   width: 336px;
-  height: auto;
-  zoom: 115%;
-  margin: -40px 0 0 -50px;
+  height: 224px;
+  // zoom: 115%;
+  // margin: -40px 0 0 -50px;
 }
 
 @media (min-width: 800px) {
@@ -22,9 +22,9 @@
   }
   .big-image {
     width: 1128px;
-    height: auto;
-    zoom: 116%;
-    margin: -150px 0 0 -178px;
+    height: 744px;
+    // zoom: 116%;
+    // margin: -150px 0 0 -178px;
   }
 }
 

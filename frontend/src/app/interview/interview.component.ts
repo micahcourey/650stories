@@ -34,7 +34,7 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
     this.nextInterviewSlug = '';
     this.readingMins = 0;
     this.previousHeight = 0;
-    this.questions = [];
+    this.questions = {};
     this.interview = {};
     this.getInterview();
   }
@@ -78,10 +78,9 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
         } else {
           this.lastInterview = true;
         }
-        this.questions = this.interview.questions.sort((a, b) => {
-          return a.question_number - b.question_number;
-        });
-        if (!this.questions.length) {
+        this.questions = this.interview.questions;
+
+        if (!this.questions) {
           this.noQuestions = true;
         }
         window.scrollTo(0, 0);
@@ -92,13 +91,14 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   calcReadingTime(questions: Array<any>) {
-    let words = 0;
-    questions.forEach((question) => {
-      let qWords = 0;
-      qWords = question.question_text.split(' ').length + question.answer_text.split(' ').length;
-      words = qWords + words;
-    });
-    return Math.round(words / 250);
+    // let words = 0;
+    // questions.forEach((question) => {
+    //   let qWords = 0;
+    //   qWords = question.question_text.split(' ').length + question.answer_text.split(' ').length;
+    //   words = qWords + words;
+    // });
+    // return Math.round(words / 250);
+    return 8;
   }
 
   showNext() {

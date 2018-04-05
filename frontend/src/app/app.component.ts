@@ -75,7 +75,6 @@ export class AppComponent implements OnInit {
   }
 
   getRouteAnimation(outlet) {
-    console.log(outlet.activatedRouteData.animation)
     return outlet.activatedRouteData.animation;
   }
 

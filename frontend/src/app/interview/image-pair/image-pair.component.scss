@@ -20,8 +20,8 @@
 .image-pair1 {
   width: 320px;
   height: auto;
-  zoom: 100%;
-  margin-top: -80px;
+  // zoom: 100%;
+  // margin-top: -80px;
 }
 .pair2-mobile {
   width: 320px;
@@ -31,8 +31,8 @@
 .image-pair2-mobile {
   width: 320px;
   height: auto;
-  zoom: 184%;
-  margin: -63px 0px 0px -118px;
+  // zoom: 184%;
+  // margin: -63px 0px 0px -118px;
 }
 
 @media (min-width: 800px) {
@@ -58,15 +58,15 @@
   }
   .image-pair1 {
     width: 552px;
-    height: auto;
-    zoom: 100%;
-    margin-top: -135px;
+    height: 552px;
+    // zoom: 100%;
+    // margin-top: -135px;
   }
   .image-pair2 {
     width: 552px;
-    height: auto;
-    zoom: 184%;
-    margin: -106px 0 0 -205px;
+    height: 552px;
+    // zoom: 184%;
+    // margin: -106px 0 0 -205px;
 
   }
   .pair2-mobile {

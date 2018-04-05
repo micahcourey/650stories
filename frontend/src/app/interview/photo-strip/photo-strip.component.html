@@ -1,11 +1,8 @@
-<div class="image-container">
+<div *ngIf="interview" class="image-container">
   <div class="photo-strip-container">
-    <img class="photo-strip-image" src="{{interview?.photo_strip_image_1}}" alt="A portrait photo of the interviewee">
-    <img class="photo-strip-image" src="{{interview?.photo_strip_image_2}}" alt="A portrait photo of the interviewee">
-    <img class="photo-strip-image" src="{{interview?.photo_strip_image_3}}" alt="A portrait photo of the interviewee">
-    <img class="photo-strip-image" src="{{interview?.photo_strip_image_4}}" alt="A portrait photo of the interviewee">
+    <img *ngFor="let image of interview.photo_strip_images" class="photo-strip-image" src="{{image.url}}" alt="A portrait photo of the interviewee">
   </div>
   <div class="image-description">
-    <p>{{interview?.big_image_description}}</p>
+    <p>{{interview?.photo_strip_description}}</p>
   </div>
 </div>

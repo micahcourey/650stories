@@ -8,7 +8,7 @@
       <h2 class="interview-title">{{interview.interviewee_first_name}}</h2>
       <h2 class="interview-title">{{interview.interviewee_last_name}}</h2>
       <div class="mobile-image-container image-mobile">
-        <img class="title-image" src="{{interview.title_image}}" alt="A portrait photo of the interviewee">
+        <img class="title-image" src="{{interview.title_image.url}}" alt="A portrait photo of the interviewee">
       </div>
       <p class="interview-description">{{interview.short_description}}</p>
     </div>
@@ -19,6 +19,6 @@
     </div>
   </div>
   <div class="image-container image-desktop">
-    <img class="title-image" src="{{interview.title_image}}" alt="A portrait photo of the interviewee">
+    <img class="title-image" src="{{interview.title_image.url}}" alt="A portrait photo of the interviewee">
   </div>
 </div>

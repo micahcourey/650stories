@@ -5,7 +5,7 @@
       <div class="title-container">
         <h1>{{interview.interviewee_first_name}}</h1>
         <h1>{{interview.interviewee_last_name}}</h1>
-        <img class="title-image image-mobile" src="{{interview.title_image}}" alt="A portrait photo of the interviewee">
+        <img class="title-image image-mobile" src="{{interview.title_image.url}}" alt="A portrait photo of the interviewee">
         <div class="interview-details">
           <h6>{{interview.date | date:'MMMM d, y' | uppercase}}</h6>
           <h6>Interviewed by {{interview.author}}</h6>
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="image-container image-desktop">
-        <img class="title-image" src="{{interview.title_image}}" alt="A portrait photo of the interviewee">
+        <img class="title-image" src="{{interview.title_image.url}}" alt="A portrait photo of the interviewee">
       </div>
     </div>
   </div>

@@ -6,7 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./q-and-a.component.scss']
 })
 export class QAndAComponent implements OnInit {
-  @Input() qa;
+  @Input() question: string;
+  @Input() answer: string;
+  
   constructor() { }
 
   ngOnInit() {

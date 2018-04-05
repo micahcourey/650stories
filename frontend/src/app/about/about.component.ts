@@ -60,7 +60,7 @@ export class AboutComponent implements OnInit, OnDestroy {
         name: 'Anisse Gross', 
         position: 'Writer', 
         description: 'Anisse conducts the interviews for 650 Stories. She is a writer and editor living in San Francisco. Her work has been featured in TheNewYorker.com, Quartz, Lucky Peach, The Believer, The Guardian, BuzzFeed, and The San Francisco Chronicle, among many other notable publications.',
-        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories/about_portraits/anisse_portrait.png',
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/anisse_portrait360x360.png',
         link: 'http://anissegross.com',
         linkName: 'anissegross.com'
       },
@@ -68,7 +68,7 @@ export class AboutComponent implements OnInit, OnDestroy {
         name: 'Ian Tuttle',
         position: 'Photographer & Producer', 
         description: 'Ian produces the 650 Stories project and photographs the interviewees. He is a commercial and editorial photographer whose clients include Wells Fargo Bank, Outside Magazine, Google, and Lululemon. He lives with his wife in San Francisco.',
-        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories/about_portraits/ian_portrait.png',
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/ian_portrait360x360.png',
         link: 'http://www.ituttle.com',
         linkName: 'ituttle.com'
       },
@@ -84,7 +84,7 @@ export class AboutComponent implements OnInit, OnDestroy {
         name: 'Beth Spotswood',
         position: 'Writer', 
         description: "Beth Spotswood is a columnist and writer for the San Francisco Chronicle and the Digital Director and Contributing Writer for the quarterly magazine, Journal of Alta California. She lives in San Francisco's Mission District with her husband and several hundred pounds of unfolded laundry.",
-        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories/about_portraits/beth_portrait.png',
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/beth_portrait360x360.png',
         link: 'http://www.bethspotswood.com',
         linkName: 'bethspotswood.com'
       },
@@ -92,7 +92,7 @@ export class AboutComponent implements OnInit, OnDestroy {
         name: 'Raziel Ungar',
         position: 'Producer',
         description: "Raziel's lifelong love for the peninsula and its history lead him to launch the 650 Stories project. Growing up in Burlingame, he became an Eagle Scout by completing a comprehensive survey of Burlingame's historic homes and buildings. He lives with his wife and son in Burlingame.",
-        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories/about_portraits/raziel_portrait.png',
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/raziel_portrait360x360.png',
         link: '',
         linkName: ''
       },
@@ -100,7 +100,7 @@ export class AboutComponent implements OnInit, OnDestroy {
         name: 'Raziel Ungar Team',
         position: 'Real Estate Broker',
         description: "Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories/about_portraits/raziel_team_logo.png',
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories/raziel_team_logo.png',
         link: 'https://burlingameproperties.com/',
         linkName: 'burlingameproperties.com'
       }

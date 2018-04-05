@@ -13,7 +13,8 @@ export class ApiService {
   private boxColors: Array<any>;
 
   constructor(private http: HttpClient) {
-    this.apiUrl = 'http://159.65.78.102/';
+    // this.apiUrl = 'http://159.65.78.102/';
+    this.apiUrl = 'http://159.65.110.30/';
     this.interviews = [];
     this.boxColors = ['#1cb1d7', '#58e2b0', '#ffcf2d'];
   }
@@ -46,6 +47,7 @@ export class ApiService {
       this.getData('interview').then((data: Array<any>) => {
         this.interviews = data;
         this.setColors();
+        this.setSlug();
         console.log('interviews', this.interviews);
         return resolve(data);
       });
@@ -88,6 +90,12 @@ export class ApiService {
       }
     });
     console.log('intervies => ', this.interviews);
+  }
+
+  setSlug() {
+    this.interviews.forEach(interview => {
+      interview.slug = interview.interviewee_first_name + '_' + interview.interviewee_last_name;
+    });
   }
 
 }
