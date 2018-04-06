@@ -35,15 +35,16 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    this._apiService.getInterviews().then((interviews: any) => {
-      console.log('interviews', interviews)
-      this.interviews = interviews;
 
+    this._apiService.getInterviews().then((interviews: any) => {
+      this.interviews = interviews;
     });
+
     this.selectionShare = highlightShare({
       selector: '#shareable',
       sharers: [twitterSharer, facebookSharer, emailSharer, linkedInSharer, copySharer]
     });
+
     this.selectionShare.init();
   }
 
@@ -56,16 +57,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.showNav = true;
       this.showMobileNav = true;
     }
-    // const height = event.path[0].documentElement.scrollTop;
-    // if (height === 0) {
-    //   this.showMobileNav = false;
-    // }
-    // else if (this.previousHeight > height) {
-    //   this.showMobileNav = true;
-    // } else {
-    //   this.showMobileNav = false;
-    // }
-    // this.previousHeight = event.path[0].documentElement.scrollTop;
     this.scrollIndex++;
   }
 

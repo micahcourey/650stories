@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter, AfterViewChecked, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Component({
   selector: 'story-nav',
   templateUrl: './story-nav.component.html',
   styleUrls: ['./story-nav.component.scss']
 })
-export class StoryNavComponent implements OnInit, AfterViewChecked, OnDestroy {
+export class StoryNavComponent implements OnInit, OnDestroy {
   @Input() selectedTab: string;
   @Input() interviewColor: string;
   @Input() showProgress = false;
@@ -22,16 +22,9 @@ export class StoryNavComponent implements OnInit, AfterViewChecked, OnDestroy {
 
   }
 
-  ngAfterViewChecked() {
-    // this.showNav = true;
-  }
-
   ngOnDestroy() {
     this.leavingPage.emit();
-    console.log('leaving');
   }
-
-
 
   toggleNav() {
     if (this.showMobileMenu === false) {

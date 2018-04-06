@@ -21,9 +21,10 @@
     </div>
     <div class="sort-container" [ngClass]="{'white-icon': isHovering}">
       <h5 class="sort">Sort</h5>
-      <select class="overlay-button" name="sort"  
+      <select [(ngModel)]="selectedSortType" (change)="sortInterviews(selectedSortType)" class="overlay-button" name="sort"  
         (mouseenter)="toggleHoverEffect()" (mouseleave)="toggleHoverEffect()">
         <option value="mostRecent">most recent</option>
+        <option value="earliest">earliest</option>
       </select>
     </div>
   </div>
@@ -100,8 +101,9 @@
     
     <div class="sort-container">
       <h5 class="sort">Sort</h5>
-      <select class="overlay-button" name="sort">
-        <option value="mostRecent">most recent</option>
+      <select [(ngModel)]="selectedSortType" (change)="sortInterviews(selectedSortType)" class="overlay-button" name="sort">
+        <option value="mostRecent" selected>most recent</option>
+        <option value="earliest">earliest</option>
       </select>
     </div>
 

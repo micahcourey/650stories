@@ -23,7 +23,6 @@ export class InterviewCardsComponent implements OnInit {
       this.interviews = this.limitInterviews(this.limit);
     }
     this.sortInterviewsByDate();
-    console.log(this.interviews);
   }
 
   sortInterviewsByDate() {
@@ -32,7 +31,6 @@ export class InterviewCardsComponent implements OnInit {
       b = new Date(b.date);
       return a > b ? -1 : a < b ? 1 : 0;
     });
-    console.log('sorted interviews', this.interviews);
   }
 
   shortenDescription() {
@@ -44,7 +42,6 @@ export class InterviewCardsComponent implements OnInit {
           sentenceCount++;
           if (sentenceCount === 2) {
             const shortDescription = desc.slice(0, i + 1);
-            console.log('shortened description => ', shortDescription);
             interview.short_description = shortDescription;
           }
         }
@@ -65,7 +62,6 @@ export class InterviewCardsComponent implements OnInit {
         i = 0;
       }
     });
-    console.log('interviews => ', this.interviews);
   }
 
 }

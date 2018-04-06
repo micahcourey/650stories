@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, OnChanges, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, HostListener, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as highlightShare from 'highlight-share';
 import * as twitterSharer from 'highlight-share/dist/sharers/twitter';
@@ -14,7 +14,7 @@ import { ApiService } from '../services/api.service';
   templateUrl: './interview.component.html',
   styleUrls: ['./interview.component.scss']
 })
-export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
+export class InterviewComponent implements OnInit, OnDestroy {
   title = 'app';
   nextInterview: any;
   selectionShare: any;
@@ -40,18 +40,12 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['id']);
-    console.log(this.questions);
     window.scrollTo(0, 0);
     this.selectionShare = highlightShare({
       selector: '#shareable',
       sharers: [twitterSharer, facebookSharer, emailSharer, linkedInSharer, copySharer]
     });
     this.selectionShare.init();
-  }
-
-  ngOnChanges() {
-    console.log('onChanges Fired');
   }
 
   ngOnDestroy() {
@@ -63,13 +57,12 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
     this.interview = {};
     setTimeout(() => {
       this._apiService.getInterview(this.route.snapshot.params['slug']).then((interviews: any) => {
-        console.log('interview component interviews ', interviews);
         this.interview = interviews[0];
-        this.readingMins = this.calcReadingTime(this.interview.questions);
-        console.log('Reading Time: ', this.readingMins + ' minutes');
+        if (this.interview.questions) {
+          this.readingMins = this.calcReadingTime(this.interview.questions);
+        }
         if (interviews[1] !== undefined) {
           this.nextInterview = interviews[1];
-          console.log(this.nextInterview);
           if (this.nextInterview.slug) {
             this.nextInterviewSlug = this.nextInterview.slug;
           } else {
@@ -90,15 +83,17 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
 
   }
 
-  calcReadingTime(questions: Array<any>) {
-    // let words = 0;
-    // questions.forEach((question) => {
-    //   let qWords = 0;
-    //   qWords = question.question_text.split(' ').length + question.answer_text.split(' ').length;
-    //   words = qWords + words;
-    // });
-    // return Math.round(words / 250);
-    return 8;
+  calcReadingTime(questions) {
+    let words = 0;
+    Object.keys(questions).forEach((qKey) => {
+      let qWords = 0;
+      const text = questions[qKey];
+      if (typeof text === 'string' && (qKey.indexOf('q') > -1 || qKey.indexOf('a') > -1)) {
+        qWords = text.split(' ').length;
+        words = qWords + words;
+      }
+    });
+    return Math.round(words / 250);
   }
 
   showNext() {
@@ -114,16 +109,6 @@ export class InterviewComponent implements OnInit, OnChanges, OnDestroy {
       this.showNav = true;
       this.showMobileNav = true;
     }
-    // const height = event.path[0].documentElement.scrollTop;
-    // if (height === 0) {
-    //   this.showMobileNav = false;
-    // }
-    //  else if (this.previousHeight > height) {
-    //   this.showMobileNav = true;
-    // } else {
-    //   this.showMobileNav = false;
-    // }
-    // this.previousHeight = event.path[0].documentElement.scrollTop;
     this.scrollIndex++;
   }
 

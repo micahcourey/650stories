@@ -19,21 +19,18 @@ export class ApiService {
     this.boxColors = ['#1cb1d7', '#58e2b0', '#ffcf2d'];
   }
 
-  getOptions() {
+  private getOptions() {
     return { headers: new HttpHeaders().set('append', 'key=AIzaSyA5dg6bA_5AhoNl3DkqPxdN1nxfUPk68W0')};
   }
 
   extractData(res: Response) {
-    console.log('res', res);
     return res || {};
   }
 
   getData(route: string) {
     return new Promise((resolve, reject) => {
       this.interviewsSub = this.http.get(this.apiUrl + route).map(this.extractData).toPromise();
-      console.log('got the interviews!');
       this.interviewsSub.then((res) => {
-        console.log(res)
         resolve(res);
         return;
       }, rej => {
@@ -46,9 +43,14 @@ export class ApiService {
     return new Promise((resolve, reject) => {
       this.getData('interview').then((data: Array<any>) => {
         this.interviews = data;
+        this.interviews.sort((a, b) => {
+          a = new Date(a.date);
+          b = new Date(b.date);
+          return a > b ? -1 : a < b ? 1 : 0;
+        });
         this.setColors();
         this.setSlug();
-        console.log('interviews', this.interviews);
+        // console.log('interviews', this.interviews);
         return resolve(data);
       });
     });
@@ -56,27 +58,16 @@ export class ApiService {
 
   getInterview(interviewSlug) {
     return new Promise((resolve, reject) => {
-      // if (!this.interviews.length) {
-        this.getInterviews().then((interviews: any) => {
-          this.interviews = interviews;
-          this.interviews.sort((a, b) => {
-            a = new Date(a.date);
-            b = new Date(b.date);
-            return a > b ? -1 : a < b ? 1 : 0;
-          });
-          const requestedInterview = this.interviews.find(interview => interview.slug === interviewSlug);
-          const i = this.interviews.indexOf(requestedInterview);
-          let nextInterview = this.interviews[i + 1];
-          if (nextInterview === undefined) {
-            nextInterview = this.interviews[0];
-          }
-          console.log(requestedInterview);
-          console.log('index of interview', i);
-          return resolve([requestedInterview, nextInterview]);
-        });
-      // } else {
-      //   return this.interviews.find(interview => +interview.id === +interviewSlug);
-      // }
+      this.getInterviews().then((interviews: any) => {
+        this.interviews = interviews;
+        const requestedInterview = this.interviews.find(interview => interview.slug === interviewSlug);
+        const i = this.interviews.indexOf(requestedInterview);
+        let nextInterview = this.interviews[i + 1];
+        if (nextInterview === undefined) {
+          nextInterview = this.interviews[0];
+        }
+        return resolve([requestedInterview, nextInterview]);
+      });
     });
   }
 
@@ -89,7 +80,6 @@ export class ApiService {
         i = 0;
       }
     });
-    console.log('intervies => ', this.interviews);
   }
 
   setSlug() {

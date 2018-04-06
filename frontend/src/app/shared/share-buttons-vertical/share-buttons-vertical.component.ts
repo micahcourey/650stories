@@ -11,7 +11,6 @@ export class ShareButtonsVerticalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('shareText ', this.shareText)
     this.shareText = `"${this.shareText}"`;
   }
 

@@ -1,6 +1,6 @@
 <div class="navbar-container desktop-nav animated slideInDown" 
   [ngClass]="{'slideOutUp': showNav === false}">
-  <story-nav [showProgress]="true" (leavingPage)="showNav = false"></story-nav>
+  <story-nav [interviewColor]="interview?.color" [showProgress]="true" (leavingPage)="showNav = false"></story-nav>
 </div>
 <div  class="navbar-container mobile-nav animated slideInDown" 
   [ngClass]="{'slideOutUp': showMobileNav === false}">
@@ -23,34 +23,34 @@
       <q-and-a [question]="questions?.question_2" [answer]="questions?.answer_2"></q-and-a>
       <q-and-a [question]="questions?.question_3" [answer]="questions?.answer_3"></q-and-a>
 
-      <photo-strip [interview]="interview"></photo-strip>
+      <photo-strip *ngIf="questions && interview?.photo_strip_images?.url" [interview]="interview"></photo-strip>
 
       <q-and-a [question]="questions?.question_4" [answer]="questions?.answer_4"></q-and-a>
       <q-and-a [question]="questions?.question_5" [answer]="questions?.answer_5"></q-and-a>
 
-      <pull-quote [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_1"></pull-quote>
+      <pull-quote *ngIf="questions && interview?.pull_quote_1" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_1"></pull-quote>
 
       <q-and-a [question]="questions?.question_6" [answer]="questions?.answer_6"></q-and-a>
       <q-and-a [question]="questions?.question_7" [answer]="questions?.answer_7"></q-and-a>
 
-      <pull-quote [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_2"></pull-quote>
+      <pull-quote *ngIf="questions && interview?.pull_quote_2" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_2"></pull-quote>
       
       <q-and-a [question]="questions?.question_8" [answer]="questions?.answer_8"></q-and-a>
       <q-and-a [question]="questions?.question_9" [answer]="questions?.answer_9"></q-and-a>
 
-      <big-image [image]="interview?.big_image.url" [description]="interview?.big_image_description"></big-image>
+      <big-image *ngIf="interview?.big_image?.url" [image]="interview.big_image.url" [description]="interview?.big_image_description"></big-image>
 
       <q-and-a [question]="questions?.question_10" [answer]="questions?.answer_10"></q-and-a>
       <q-and-a [question]="questions?.question_11" [answer]="questions?.answer_11"></q-and-a>
       <q-and-a [question]="questions?.question_12" [answer]="questions?.answer_12"></q-and-a>
 
-      <pull-quote *ngIf="interview?.pull_quote_3" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_3"></pull-quote>
+      <pull-quote *ngIf="questions && interview?.pull_quote_3" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_3"></pull-quote>
 
       <q-and-a [question]="questions?.question_13" [answer]="questions?.answer_13"></q-and-a>
 
-      <image-pair [interview]="interview"></image-pair>
+      <image-pair *ngIf="interview?.image_pair?.url" [interview]="interview"></image-pair>
 
-      <pull-quote *ngIf="interview?.pull_quote_4" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_4"></pull-quote>
+      <pull-quote *ngIf="questions?.question_13 && interview?.pull_quote_4" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_4"></pull-quote>
 
       <q-and-a *ngIf="questions?.question_14" [question]="questions.question_14" [answer]="questions?.answer_14"></q-and-a>
       <q-and-a *ngIf="questions?.question_15" [question]="questions.question_15" [answer]="questions?.answer_15"></q-and-a>
@@ -59,23 +59,27 @@
       <q-and-a *ngIf="questions?.question_17" [question]="questions.question_17" [answer]="questions?.answer_14"></q-and-a>
       <q-and-a *ngIf="questions?.question_18" [question]="questions.question_18" [answer]="questions?.answer_15"></q-and-a>
       <q-and-a *ngIf="questions?.question_19" [question]="questions.question_19" [answer]="questions?.answer_16"></q-and-a>
+
+      <pull-quote *ngIf="interview?.bonus_pull_quote_5 && questions?.question_17" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.bonus_pull_quote_1"></pull-quote>
+
       <q-and-a *ngIf="questions?.question_20" [question]="questions.question_20" [answer]="questions?.answer_14"></q-and-a>
       <q-and-a *ngIf="questions?.question_21" [question]="questions.question_21" [answer]="questions?.answer_15"></q-and-a>
+      
+      <big-image *ngIf="interview?.bonus_big_image?.url && questions?.question_22" [image]="interview.bonus_big_image.url" [description]="interview?.big_image_description"></big-image>
+
       <q-and-a *ngIf="questions?.question_22" [question]="questions.question_22" [answer]="questions?.answer_16"></q-and-a>
       <q-and-a *ngIf="questions?.question_23" [question]="questions.question_23" [answer]="questions?.answer_14"></q-and-a>
       <q-and-a *ngIf="questions?.question_24" [question]="questions.question_24" [answer]="questions?.answer_15"></q-and-a>
-      <q-and-a *ngIf="questions?.question_25" [question]="questions.question_25" [answer]="questions?.answer_16"></q-and-a>
+      
+      <pull-quote *ngIf="interview?.bonus_pull_quote_2 && questions?.question_25" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.bonus_pull_quote_2"></pull-quote>
+      
+      <q-and-a *ngIf="questions?.question_25" [question]="questions.question_25" [answer]="questions?.answer_16"></q-and-a>    
       <q-and-a *ngIf="questions?.question_26" [question]="questions.question_26" [answer]="questions?.answer_14"></q-and-a>
       <q-and-a *ngIf="questions?.question_27" [question]="questions.question_27" [answer]="questions?.answer_15"></q-and-a>
       <q-and-a *ngIf="questions?.question_28" [question]="questions.question_28" [answer]="questions?.answer_16"></q-and-a>
       <q-and-a *ngIf="questions?.question_29" [question]="questions.question_29" [answer]="questions?.answer_15"></q-and-a>
       <q-and-a *ngIf="questions?.question_30" [question]="questions.question_30" [answer]="questions?.answer_16"></q-and-a>
 
-    </div>
-
-    <div *ngIf="noQuestions" class="no-questions-container">
-      <h4>This interview is in development</h4>
-      <h4>Check out the interview with <a (click)="showNext()" class="no-q-link">Bego Lozano</a></h4>
     </div>
 
     <!-- MOBILE FOOTER -->

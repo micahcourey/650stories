@@ -28,10 +28,12 @@ export class DirectoryComponent implements OnInit, OnDestroy {
   overlayButtons: Array<any>;
   scrollIndex = 0;
   isHovering = false;
+  selectedSortType: string;
 
   constructor(private http: HttpClient, private _apiService: ApiService) {
     this.interviews = [];
     this.userEmail = '';
+    this.selectedSortType = 'mostRecent';
     this.previousHeight = 0;
     this.overlayButtons = [
       { title: 'show all', selected: true },
@@ -87,6 +89,23 @@ export class DirectoryComponent implements OnInit, OnDestroy {
     }
   }
 
+  sortInterviews(sortType: string) {
+    if (sortType === 'mostRecent') {
+      this.interviews.sort((a, b) => {
+        a = new Date(a.date);
+        b = new Date(b.date);
+        return a > b ? -1 : a < b ? 1 : 0;
+      });
+    }
+    if (sortType === 'earliest') {
+      this.interviews.sort((a, b) => {
+        a = new Date(a.date);
+        b = new Date(b.date);
+        return a - b;
+      });
+    }
+  }
+
   toggleFilterButton(filterName) {
     this.overlayButtons.forEach((filter) => {
       if (filter.title === filterName) {
@@ -105,7 +124,6 @@ export class DirectoryComponent implements OnInit, OnDestroy {
     } else {
       this.isHovering = true;
     }
-    console.log('hovering ', this.isHovering)
   }
 
 }
