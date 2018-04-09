@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HttpClientJsonpModule } from '@angular/common/http';
 import { Response } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShareModule } from '@ngx-share/core';
 import { RouterModule } from '@angular/router';
 
@@ -67,9 +67,11 @@ import { BigImageComponent } from './interview/big-image/big-image.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     routing,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     ShareModule.forRoot(),
   ],
   providers: [

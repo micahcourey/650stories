@@ -57,8 +57,8 @@
 
   <div class="directory-subfooter">
     <h3>Subscribe and never miss an interview</h3>
-    <div class="input-container">
-      <input [(ngModel)]="userEmail" type="email" placeholder="your email address" (keyup.enter)="submitEmail()" />
+    <div [formGroup]="emailForm" class="input-container">
+      <input formControlName="email_address" type="email" placeholder="your email address" (keyup.enter)="submitEmail()" />
       <div class="input-button"  (click)="submitEmail()">
         <h6>Subscribe</h6>
         <!-- <img src="/assets/icons/Arrow-fff.svg" alt="arrow pointing right"> -->
@@ -112,4 +112,9 @@
     </div>
   </div>
 
+</div>
+
+<div class="notification animated slideInRight" *ngIf="submitted">
+  <h3>Success</h3>
+  You're now subscribed to 650Stories!
 </div>

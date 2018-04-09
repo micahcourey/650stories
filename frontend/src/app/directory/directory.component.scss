@@ -147,7 +147,7 @@ h5 {
   margin-right: 0;
   background: transparent;
   padding-right: 4px;
-  background-image: url("../../assets/icons/Select.svg");
+  background-image: url("https://s3-us-west-1.amazonaws.com/650stories-images/Select.svg");
   background-repeat: no-repeat; 
   background-position: calc(100% - 20px) center;
   -webkit-appearance: none;
@@ -160,12 +160,27 @@ h5 {
   color: #fff;
 }
 .white-icon > select {
-  background-image: url("../../assets/icons/Select-fff.svg") !important;
+  background-image: url("https://s3-us-west-1.amazonaws.com/650stories-images/Select-fff.svg") !important;
 }
 .filter {
   position: absolute;
   bottom: 43px;
   align-self: center;
+}
+.notification {
+  position: fixed;
+  bottom: 192px;
+  right: 0;
+  background: #1cb1d7;
+  color: #fff;
+  width: 200px;
+  font-size: 1rem;
+  font-family: Georgia;
+  line-height: 1.3;
+  padding: 1rem;
+}
+.notification > h3 {
+  font-size: 1.4rem;
 }
 
 @media (max-width: 800px) {

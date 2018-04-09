@@ -23,7 +23,7 @@
       <q-and-a [question]="questions?.question_2" [answer]="questions?.answer_2"></q-and-a>
       <q-and-a [question]="questions?.question_3" [answer]="questions?.answer_3"></q-and-a>
 
-      <photo-strip *ngIf="questions && interview?.photo_strip_images?.url" [interview]="interview"></photo-strip>
+      <photo-strip *ngIf="interview?.photo_strip_images.length > 0" [interview]="interview"></photo-strip>
 
       <q-and-a [question]="questions?.question_4" [answer]="questions?.answer_4"></q-and-a>
       <q-and-a [question]="questions?.question_5" [answer]="questions?.answer_5"></q-and-a>
@@ -38,7 +38,7 @@
       <q-and-a [question]="questions?.question_8" [answer]="questions?.answer_8"></q-and-a>
       <q-and-a [question]="questions?.question_9" [answer]="questions?.answer_9"></q-and-a>
 
-      <big-image *ngIf="interview?.big_image?.url" [image]="interview.big_image.url" [description]="interview?.big_image_description"></big-image>
+      <big-image *ngIf="interview?.big_image" [image]="interview.big_image.url" [description]="interview?.big_image_description"></big-image>
 
       <q-and-a [question]="questions?.question_10" [answer]="questions?.answer_10"></q-and-a>
       <q-and-a [question]="questions?.question_11" [answer]="questions?.answer_11"></q-and-a>
@@ -48,7 +48,7 @@
 
       <q-and-a [question]="questions?.question_13" [answer]="questions?.answer_13"></q-and-a>
 
-      <image-pair *ngIf="interview?.image_pair?.url" [interview]="interview"></image-pair>
+      <image-pair *ngIf="interview?.image_pair.length > 0" [interview]="interview"></image-pair>
 
       <pull-quote *ngIf="questions?.question_13 && interview?.pull_quote_4" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_4"></pull-quote>
 
@@ -60,12 +60,12 @@
       <q-and-a *ngIf="questions?.question_18" [question]="questions.question_18" [answer]="questions?.answer_15"></q-and-a>
       <q-and-a *ngIf="questions?.question_19" [question]="questions.question_19" [answer]="questions?.answer_16"></q-and-a>
 
-      <pull-quote *ngIf="interview?.bonus_pull_quote_5 && questions?.question_17" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.bonus_pull_quote_1"></pull-quote>
+      <pull-quote *ngIf="interview?.bonus_pull_quote_1 && questions?.question_17" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.bonus_pull_quote_1"></pull-quote>
 
       <q-and-a *ngIf="questions?.question_20" [question]="questions.question_20" [answer]="questions?.answer_14"></q-and-a>
       <q-and-a *ngIf="questions?.question_21" [question]="questions.question_21" [answer]="questions?.answer_15"></q-and-a>
       
-      <big-image *ngIf="interview?.bonus_big_image?.url && questions?.question_22" [image]="interview.bonus_big_image.url" [description]="interview?.big_image_description"></big-image>
+      <big-image *ngIf="interview?.bonus_big_image && questions?.question_22" [image]="interview.bonus_big_image.url" [description]="interview?.big_image_description"></big-image>
 
       <q-and-a *ngIf="questions?.question_22" [question]="questions.question_22" [answer]="questions?.answer_16"></q-and-a>
       <q-and-a *ngIf="questions?.question_23" [question]="questions.question_23" [answer]="questions?.answer_14"></q-and-a>
