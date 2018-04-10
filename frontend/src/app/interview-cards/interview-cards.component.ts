@@ -37,6 +37,7 @@ export class InterviewCardsComponent implements OnInit {
     this.interviews.forEach(interview => {
       let sentenceCount: number = 0;
       const desc = interview.description;
+      interview.mobile_description = desc.slice(0, 250) + '...';
       for (let i = 0; i < desc.length; i++) {
         if (desc[i] === '.' || desc[i] === '?' || desc[i] === '!') {
           sentenceCount++;

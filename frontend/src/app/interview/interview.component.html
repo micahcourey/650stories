@@ -47,7 +47,8 @@
       <pull-quote *ngIf="questions && interview?.pull_quote_3" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_3"></pull-quote>
 
       <q-and-a [question]="questions?.question_13" [answer]="questions?.answer_13"></q-and-a>
-
+      <q-and-a *ngIf="questions?.question_14" [question]="questions.question_14" [answer]="questions?.answer_14"></q-and-a>
+      
       <image-pair *ngIf="interview?.image_pair.length > 0" [interview]="interview"></image-pair>
 
       <pull-quote *ngIf="questions?.question_13 && interview?.pull_quote_4" [color]="interview?.color" [url]="interview?.slug" [quoteText]="interview?.pull_quote_4"></pull-quote>

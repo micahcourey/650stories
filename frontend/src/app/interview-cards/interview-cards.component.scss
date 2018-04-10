@@ -84,12 +84,12 @@
   margin-bottom: 2rem;
 }
 @media (min-width: 700px) {
-  .image-mobile {
+  .image-mobile, .mobile {
     display: none !important;
   }
 }
 @media (max-width: 701px) {
-  .image-desktop {
+  .image-desktop, .desktop {
     display: none !important;
   }
 }

@@ -39,6 +39,7 @@ export class DirectoryComponent implements OnInit, OnDestroy {
   emailForm: FormGroup;
   mailChimpEndpoint: string;
   error: string;
+  hasError: boolean;
 
   constructor(private http: HttpClient, private _apiService: ApiService) {
     this.interviews = [];
@@ -85,7 +86,8 @@ export class DirectoryComponent implements OnInit, OnDestroy {
 
   submitEmail() {
     this.error = '';
-    this.submitted = true;
+    this.submitted = false;
+    this.hasError = false;
 
     if (this.emailForm.get('email_address').valid) {
 
@@ -106,11 +108,19 @@ export class DirectoryComponent implements OnInit, OnDestroy {
             }, 3000);
         } else {
           this.error = response.msg;
+          this.hasError = true;
+          setTimeout(() => {
+            this.hasError = false;
+          }, 3000);
           console.error(this.error);
         }
       }, error => {
         console.error(error);
+        this.hasError = true;
         this.error = 'Sorry, an error occurred.';
+        setTimeout(() => {
+          this.hasError = false;
+        }, 3000);
       });
     }
   }
