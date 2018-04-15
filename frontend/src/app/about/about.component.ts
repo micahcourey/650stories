@@ -97,6 +97,14 @@ export class AboutComponent implements OnInit, OnDestroy {
         linkName: ''
       },
       {
+        name: 'Micah Courey',
+        position: 'Developer',
+        description: 'Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/micah_portrait360x360.png',
+        link: 'http://micahcourey.com',
+        linkName: 'micahcourey.com'
+      },
+      {
         name: 'Raziel Ungar Team',
         position: 'Real Estate Broker',
         description: "Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
