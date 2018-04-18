@@ -58,7 +58,7 @@ export class InterviewComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       this._apiService.getInterview(this.route.snapshot.params['slug']).then((interviews: any) => {
         this.interview = interviews[0];
-        console.log(this.interview)
+        // console.log(this.interview);
         if (this.interview.questions) {
           this.readingMins = this.calcReadingTime(this.interview.questions);
         }

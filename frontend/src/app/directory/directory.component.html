@@ -12,15 +12,18 @@
   </div>
 
   <div class="desktop-filters">
-    <div class="desktop-filter-buttons">
-      <div *ngFor="let button of overlayButtons" class="overlay-button"
-        [ngClass]="{'overlay-button-active': button.selected }"
-        (click)="toggleFilterButton(button.title)">
-        {{button.title}}
+    <div class="desktop-filter-container">
+      <h5 class="filter-label-desktop">Filter</h5>
+      <div class="desktop-filter-buttons">
+        <div *ngFor="let button of overlayButtons" class="overlay-button"
+          [ngClass]="{'overlay-button-active': button.selected }"
+          (click)="toggleFilterButton(button.title)">
+          {{button.title}}
+        </div>
       </div>
     </div>
     <div class="sort-container" [ngClass]="{'white-icon': isHovering}">
-      <h5 class="sort">Sort</h5>
+      <h5 class="filter-label-desktop">Sort</h5>
       <select [(ngModel)]="selectedSortType" (change)="sortInterviews(selectedSortType)" class="overlay-button" name="sort"  
         (mouseenter)="toggleHoverEffect()" (mouseleave)="toggleHoverEffect()">
         <option value="mostRecent">most recent</option>

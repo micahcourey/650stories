@@ -232,6 +232,19 @@ h5 {
     align-items: center;
     background: linear-gradient(to right, #fafaf9 0%,#fafaf9 20.75%,#fafaf9 20.75%,white 20.75%,white 100%);
   }
+  .filter-label-desktop {
+    opacity: 0.4;
+    font-family: Metric-Semibold;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 4px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #141410;
+  }
   .card-container {
     margin-top: 60px;
   }
@@ -243,6 +256,10 @@ h5 {
     justify-content: space-between;
     width: 70.5vw;
     margin-top: -24px;
+  }
+  .desktop-filter-container {
+    display: flex;
+    flex-direction: column;
   }
   .desktop-filter-buttons {
     display: flex;

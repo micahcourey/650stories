@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'share-buttons',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./share-buttons.component.scss']
 })
 export class ShareButtonsComponent implements OnInit {
+  @Input() shareText: string;
+
+  description: string;
 
   constructor() { }
 
   ngOnInit() {
+    if (this.shareText) {
+      this.description = this.shareText;
+    } else {
+      this.description = 'Check out this inspiring interview from the 650 Area Code!';
+    }
   }
 
 }

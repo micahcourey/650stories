@@ -44,6 +44,9 @@ export class InterviewCardsComponent implements OnInit {
           if (sentenceCount === 2) {
             const shortDescription = desc.slice(0, i + 1);
             interview.short_description = shortDescription;
+            if (shortDescription.length < interview.mobile_description.length) {
+              interview.mobile_description = shortDescription;
+            }
           }
         }
       }

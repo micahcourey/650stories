@@ -1,7 +1,7 @@
 <div [ngStyle]="{'background': backgroundGradient}"  class="quote-container">
   <h4 class="mobile-share">{{quoteText}}</h4>
   <div class="mobile-share">
-    <share-buttons></share-buttons>
+    <share-buttons [shareText]="quoteText"></share-buttons>
   </div>
   <div class="desktop-share">
     <share-buttons-vertical [shareText]="quoteText"></share-buttons-vertical>
