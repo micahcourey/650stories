@@ -99,7 +99,7 @@ export class AboutComponent implements OnInit, OnDestroy {
       {
         name: 'Micah Courey',
         position: 'Developer',
-        description: 'Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
+        description: 'Micah performs the website development for 650 Stories. He works as a web developer specializing in UI/UX web application design and development. He lives in Portland, Oregon where you can find him cycling around the city or hiking trails in Forest Park.',
         imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/micah_portrait360x360.png',
         link: 'http://micahcourey.com',
         linkName: 'micahcourey.com'
