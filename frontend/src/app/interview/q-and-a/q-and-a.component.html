@@ -1,2 +1,2 @@
 <h6>{{question}}</h6>
-<p>{{answer}}</p>
+<p [innerHTML]="answer | newlineReplacer : true"></p>

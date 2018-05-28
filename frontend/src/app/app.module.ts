@@ -37,6 +37,7 @@ import { ScrollPositionBarComponent } from './shared/scroll-position-bar/scroll-
 import { ImagePairComponent } from './interview/image-pair/image-pair.component';
 import { PhotoStripComponent } from './interview/photo-strip/photo-strip.component';
 import { BigImageComponent } from './interview/big-image/big-image.component';
+import { NewlineReplacerPipe } from './pipes/newline-replacer.pipe';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { BigImageComponent } from './interview/big-image/big-image.component';
     ScrollPositionBarComponent,
     ImagePairComponent,
     PhotoStripComponent,
-    BigImageComponent
+    BigImageComponent,
+    NewlineReplacerPipe
   ],
   imports: [
     BrowserModule,

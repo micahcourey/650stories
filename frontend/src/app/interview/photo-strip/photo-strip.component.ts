@@ -13,8 +13,6 @@ export class PhotoStripComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.interview)
-
     this.interview.photo_strip_images.sort((a, b) => {
       if (a.name < b.name) return -1
       if (a.name > b.name) return 1

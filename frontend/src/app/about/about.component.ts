@@ -75,10 +75,10 @@ export class AboutComponent implements OnInit, OnDestroy {
       {
         name: 'James Hobbs',
         position: 'Designer',
-        description: 'Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
-        imageUrl: '',
-        link: 'lorumipsum.com',
-        linkName: 'lorumipsum.com'
+        description: 'James designed the 650 Stories website and brand. Originally from New Zealand, he is currently based in Portland, Oregon where he works as a Design Director. He is currently restoring a historic home with his wife.',
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/james_portrait360x360.jpg',
+        link: '',
+        linkName: ''
       },
       {
         name: 'Beth Spotswood',

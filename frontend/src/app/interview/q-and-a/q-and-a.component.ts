@@ -9,7 +9,8 @@ export class QAndAComponent implements OnInit {
   @Input() question: string;
   @Input() answer: string;
   
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
 
