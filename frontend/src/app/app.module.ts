@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient, HttpClientJsonpModule } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ShareModule } from '@ngx-share/core';
 import { RouterModule } from '@angular/router';
 
@@ -82,6 +83,7 @@ import { NewlineReplacerPipe } from './pipes/newline-replacer.pipe';
     HttpClientModule,
     FormsModule,
     NgxScrollSignalService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })

@@ -13,8 +13,7 @@ export class ApiService {
   private boxColors: Array<any>;
 
   constructor(private http: HttpClient) {
-    // this.apiUrl = 'http://159.65.78.102/';
-    this.apiUrl = 'http://159.65.110.30/';
+    this.apiUrl = 'https://650stories.com/';
     this.interviews = [];
     this.boxColors = ['#1cb1d7', '#58e2b0', '#ffcf2d'];
   }

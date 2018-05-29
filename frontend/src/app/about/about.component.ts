@@ -77,8 +77,8 @@ export class AboutComponent implements OnInit, OnDestroy {
         position: 'Designer',
         description: 'James designed the 650 Stories website and brand. Originally from New Zealand, he is currently based in Portland, Oregon where he works as a Design Director. He is currently restoring a historic home with his wife.',
         imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/james_portrait360x360.jpg',
-        link: '',
-        linkName: ''
+        link: 'http://octop.us',
+        linkName: 'octop.us'
       },
       {
         name: 'Beth Spotswood',
