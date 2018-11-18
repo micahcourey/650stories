@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { secrets } from '../../secrets'
 
 @Injectable()
 export class ApiService {
@@ -11,15 +12,17 @@ export class ApiService {
   private interviews: Array<any>;
   private interviewsSub;
   private boxColors: Array<any>;
+  private key: string;
 
   constructor(private http: HttpClient) {
     this.apiUrl = 'https://650stories.com/';
     this.interviews = [];
     this.boxColors = ['#1cb1d7', '#58e2b0', '#ffcf2d'];
+    this.key = secrets.key;
   }
 
   private getOptions() {
-    return { headers: new HttpHeaders().set('append', 'key=AIzaSyA5dg6bA_5AhoNl3DkqPxdN1nxfUPk68W0')};
+    return { headers: new HttpHeaders().set('append', `key=${key}`)};
   }
 
   extractData(res: Response) {
