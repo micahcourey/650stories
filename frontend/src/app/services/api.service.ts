@@ -22,7 +22,7 @@ export class ApiService {
   }
 
   private getOptions() {
-    return { headers: new HttpHeaders().set('append', `key=${key}`)};
+    return { headers: new HttpHeaders().set('append', `key=${this.key}`)};
   }
 
   extractData(res: Response) {
