@@ -111,17 +111,15 @@ a:hover + .link-bg {
   margin-top: -16px;
 }
 .logo-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #141410 !important;
-  height: 360px;
+  background-color: #fff;
+  width: 360px;
+  height: auto;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 .logo-image > .member-image {
-  width: 260px !important;
-  height: auto !important;
-  margin-bottom: 3rem;
+  width: 360px;
+  height: auto;
 }
 .logo-image > .pacific-logo {
   width: 148px;

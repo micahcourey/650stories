@@ -41,16 +41,6 @@ export class AboutComponent implements OnInit, OnDestroy {
       this.showNav = true;
       this.showMobileNav = true;
     }
-    // const height = event.path[0].documentElement.scrollTop;
-    // if (height === 0) {
-    //   this.showMobileNav = false;
-    // }
-    // else if (this.previousHeight > height) {
-    //   this.showMobileNav = true;
-    // } else {
-    //   this.showMobileNav = false;
-    // }
-    // this.previousHeight = event.path[0].documentElement.scrollTop;
     this.scrollIndex++;
   }
 
@@ -92,9 +82,9 @@ export class AboutComponent implements OnInit, OnDestroy {
         name: 'Raziel Ungar',
         position: 'Producer',
         description: "Raziel's lifelong love for the peninsula and its history lead him to launch the 650 Stories project. Growing up in Burlingame, he became an Eagle Scout by completing a comprehensive survey of Burlingame's historic homes and buildings. He lives with his wife and son in Burlingame.",
-        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/raziel_portrait360x360.png',
-        link: '',
-        linkName: ''
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/raziel_2019portrait360x360.jpg',
+        link: 'https://burlingameproperties.com/',
+        linkName: 'burlingameproperties.com'
       },
       {
         name: 'Micah Courey',
@@ -103,14 +93,6 @@ export class AboutComponent implements OnInit, OnDestroy {
         imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/micah_portrait360x360.png',
         link: 'http://micahcourey.com',
         linkName: 'micahcourey.com'
-      },
-      {
-        name: 'Raziel Ungar Team',
-        position: 'Real Estate Broker',
-        description: "Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories/raziel_team_logo.png',
-        link: 'https://burlingameproperties.com/',
-        linkName: 'burlingameproperties.com'
       }
     ];
   }
