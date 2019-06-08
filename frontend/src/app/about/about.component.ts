@@ -82,7 +82,7 @@ export class AboutComponent implements OnInit, OnDestroy {
         name: 'Raziel Ungar',
         position: 'Producer',
         description: "Raziel's lifelong love for the peninsula and its history lead him to launch the 650 Stories project. Growing up in Burlingame, he became an Eagle Scout by completing a comprehensive survey of Burlingame's historic homes and buildings. He lives with his wife and son in Burlingame.",
-        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/raziel_2019portrait360x360.jpg',
+        imageUrl: 'https://s3-us-west-1.amazonaws.com/650stories-images/raziel_portrait_6_2019.png',
         link: 'https://burlingameproperties.com/',
         linkName: 'burlingameproperties.com'
       },
